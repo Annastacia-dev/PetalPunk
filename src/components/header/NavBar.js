@@ -8,7 +8,7 @@ import Image from "next/image";
 const NavBar = () => {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("transparent");
-  const [textColor, setTextColor] = useState("black");
+  const [textColor, setTextColor] = useState("white");
 
   useEffect(() => {
     const changeBackground = () => {
@@ -31,30 +31,27 @@ const NavBar = () => {
       style={{ backgroundColor: `${color}` }}
       className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
     >
-      <div className="max-w-[1240px] m-auto flex justify-between items-center p-3 text-white h-22">
+      <div className="max-w-[1240px] m-auto flex justify-between items-center p-3 h-22">
         <Link href="/">
-          <h1 className="font-bold text-3xl text-black logo flex justify-center items-center">
-            <Image src="/images/logo.png" width={20} height={20} alt='logo' className="" />
-            <span className="text-2xl mt-2 -ml-1 text-rose-600 font-babylonica">Waridi</span>
-            </h1>
+            <Image src="/images/logo.png" width={30} height={30} alt='logo' className="" />
         </Link>
-        <ul style={{ color: `${textColor}` }} className="hidden sm:flex">
-          <Link href="/#about">
+        <ul style={{ color: `${textColor}` }} className="hidden sm:flex shadow-md bg-rose-600/40 rounded">
+          <Link href="/">
             <li className="p-4 font-semibold">Home</li>
           </Link>
-          <Link href="/#services">
+          <Link href="/about">
             <li className="p-4 font-semibold">About</li>
           </Link>
-          <Link href="/#pricing">
+          <Link href="/contact">
             <li className="p-4 font-semibold">Contact</li>
           </Link>
-          <Link href="/#programs">
+          <Link href="/shop">
             <li className="p-4 font-semibold">Shop</li>
           </Link>
-          <Link href="/#trainers">
+          <Link href="/faqs">
             <li className="p-4 font-semibold">FAQs</li>
           </Link>
-          <Link href="/" className="p-4 font-semibold mt-0.5">
+          <Link href="/cart" className="p-4 font-semibold mt-0.5">
             <FaShoppingBag />
           </Link>
         </ul>

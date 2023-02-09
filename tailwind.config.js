@@ -18,6 +18,7 @@ module.exports = {
         poppins: ['Poppins', 'sans-serif'],
         rubik: ['Rubik', 'sans-serif'],
         babylonica: ['Babylonica', 'sans-serif'],
+        playfair: ['Playfair Display', 'serif'],
       }
     }
   },

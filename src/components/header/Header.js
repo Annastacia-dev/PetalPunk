@@ -9,7 +9,7 @@ const Header = () => {
     <header className="h-screen flex flex-col header">
       <NavBar />
       <div className="flex flex-col justify-center items-start h-full px-8">
-        <h1 className="text-6xl font-bold leading-16  text-rose-600 mb-8">A bouquet 
+        <h1 className="text-6xl font-bold leading-16 font-playfair  text-rose-600 mb-8">A bouquet 
         <br />for every occasion.</h1>
         <p className="text-1xl text-black leading-8 mb-6">Want to send your congratulations, condolences, or your love and support?<br />No matter the message you want to share, we have a bouquet for you.</p>  
         <motion.button initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }}
