@@ -2,6 +2,13 @@ import Image from 'next/image'
 
 const Footer = () => {
   return (
+    <>
+     <div className="flex items-center h-28 mt-10 mb-10">
+      <div className="w-1/4 h-1 bg-rose-500 rounded-full mr-4"></div>
+      <div className="w-10 h-10 -ml-5 bg-rose-500 rounded-full mr-4"></div>
+      <div className="text-rose-600 font-playfair font-bold text-3xl uppercase">Reach out</div>
+    </div>
+
     <footer className="bg-rose-800 h-full relative mt-18">
         <div className="sm:grid grid-cols-4 gap-4 mx-auto sm:px-10 sm:py-10 footer-grids">
             <div className="sm:col-span-1 border-white border-r-2 flex gap-3 flex-column justify-center items-center">
@@ -98,6 +105,7 @@ const Footer = () => {
         </div>
         
     </footer>
+    </>
   )
 }
 
