@@ -7,35 +7,18 @@ import Image from "next/image";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
-  const [color, setColor] = useState("transparent");
-  const [textColor, setTextColor] = useState("white");
-
-  useEffect(() => {
-    const changeBackground = () => {
-      if (window.scrollY >= 120) {
-        setColor("white");
-        setTextColor("black");
-      } else {
-        setColor("transparent");
-        setTextColor("black");
-      }
-    };
-    window.addEventListener("scroll", changeBackground);
-  }, []);
-
+  
   const toggleNav = () => {
     setNav(!nav);
   };
+
   return (
-    <div
-      style={{ backgroundColor: `${color}` }}
-      className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
-    >
+    <div style={{ backgroundColor: 'transparent' }} className="fixed left-0 top-0 w-full z-10 ease-in duration-300">
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-3 h-22">
-        <Link href="/">
-            <Image src="/images/logo.png" width={30} height={30} alt='logo' className="" />
+        <Link className="flex -ml-16" href="/">
+            <Image src="/images/logo.png" width={30} height={30} alt='logo' />
         </Link>
-        <ul style={{ color: `${textColor}` }} className="hidden sm:flex shadow-md bg-rose-600/40 rounded">
+        <ul className=" text-black hidden sm:flex">
           <Link href="/">
             <li className="p-4 font-semibold">Home</li>
           </Link>
