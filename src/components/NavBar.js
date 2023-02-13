@@ -32,7 +32,7 @@ const NavBar = () => {
   return (
     <div style={{ backgroundColor: `${backgroundColor}` }} className="fixed left-0 top-0 w-full z-10 ease-in duration-300">
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-3 h-22">
-        <Link className="xl:-ml-16" href="/">
+        <Link  href="/">
             <Image src="/images/logo.png" width={30} height={30} alt='logo' />
         </Link>
         <ul className=" text-black hidden sm:flex">
