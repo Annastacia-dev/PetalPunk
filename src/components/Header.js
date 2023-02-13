@@ -8,7 +8,7 @@ const Header = () => {
     <>
     <header className="h-screen flex flex-col header">
       <div className="flex flex-col justify-center items-start h-full px-8 ml-5">
-        <h1 className="text-5xl font-bold leading-16 font-playfair  text-rose-600 mt-16 mb-8">A bouquet 
+        <h1 className="text-5xl font-bold leading-22 font-playfair  text-rose-600 mt-16 mb-8">A bouquet 
         <br />for every occasion.</h1>
         <p className="text-black mb-6 sm:text-1xl sm:leading-16">Want to send your congratulations, condolences,<br /> or your love and support?<br />No matter the message you want to share, <br /> we have a bouquet for you.</p>  
         <motion.button initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }}
