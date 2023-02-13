@@ -2,12 +2,12 @@ import Image from 'next/image'
 
 const Products = () => {
   return (
-    <div className="bg-white h-full">
-            <div className="relative bg-[#f5d9e4] h-96">
-                <div className="top-0 absolute left-6 sm:h-full border-rose-600 border-r-2">
+    <div className="h-full">
+            <div className="relative bg-rose-50 h-96">
+                <div className="top-0 absolute left-6 h-full border-rose-600 border-r-2 products-line">
                     <div className="flex flex-col justify-center h-full">
-                        <h1 className="text-rose-600 text-2xl absolute sm:-left-10 font-medium font-playfair sm:-rotate-90 sm:top-15">
-                            PRODUCTS
+                        <h1 className="text-rose-600 uppercase text-2xl absolute sm:-left-10 font-medium font-playfair sm:-rotate-90 sm:top-15 products-title">
+                            products
                             </h1>
                     </div>
                 </div>          

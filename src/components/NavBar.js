@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { IoIosClose } from "react-icons/io";
+import { BiMenuAltRight } from "react-icons/bi";
 import { FaShoppingBag } from "react-icons/fa";
 import Image from "next/image";
 
@@ -59,13 +60,13 @@ const NavBar = () => {
         {/*Mobile button /> */}
         <div className="sm:hidden block z-10">
           {nav ? (
-            <AiOutlineClose
-              className="text-4xl text-black"
+            <IoIosClose
+              className="text-4xl text-white"
               onClick={toggleNav}
             />
           ) : (
-            <AiOutlineMenu
-              className="text-4xl text-black"
+            <BiMenuAltRight
+              className="text-4xl text-rose-900"
               onClick={toggleNav}
             />
           )}
@@ -74,22 +75,22 @@ const NavBar = () => {
         <div
           className={
             nav
-              ? "sm:hidden absolute top-0 right-0 left-0 bottom-0 flex justify-center items-center  w-full h-screen bg-white/95 text-black duration-300 ease-in-out"
-              : "sm:hidden absolute top-0 right-0 left-[-100%] bottom-0 flex justify-center items-center w-full h-screen bg-white/70 text-black duration-300 ease-in-out"
+              ? "sm:hidden absolute top-0 right-0 left-0 bottom-0 flex justify-center items-center  w-full h-screen bg-rose-600/90 text-white duration-300 ease-in-out"
+              : "sm:hidden absolute top-0 right-0 left-[-100%] bottom-0 flex justify-center items-center w-full h-screen bg-rose-600/70 text-white duration-300 ease-in-out"
           }
         >
           <ul onClick={toggleNav} className="text-center">
             <Link href="/#about">
-              <li className="p-4 text-3xl border-b border-black">About</li>
+              <li className="p-4 text-2xl border-b border-white">About</li>
             </Link>
             <Link href="/#services">
-              <li className="p-4 text-3xl border-b border-black">Contact</li>
+              <li className="p-4 text-2xl border-b border-white">Contact</li>
             </Link>
             <Link href="/shop">
-              <li className="p-4 text-3xl border-b border-black">Shop</li>
+              <li className="p-4 text-2xl border-b border-white">Shop</li>
             </Link>
             <Link href="/faqs">
-              <li className="p-4 text-3xl border-b border-black">FAQs</li>
+              <li className="p-4 text-2xl border-b border-white">FAQs</li>
             </Link>
           </ul>
         </div>

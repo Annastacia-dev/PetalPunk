@@ -16,6 +16,24 @@
   .footer-grids{
     margin-top: 18rem;
   }
+  .about{
+    margin-top: 18rem;
+  }
+}
 
+/* Media inquiries for 784px and below */
+@media (max-width: 784px) {
+  .footer-grids{
+    margin-top: 84rem;
+  }
+
+  .about{
+    margin-top: 85rem;
+  }
+
+  .products-title{
+    margin-top: -20rem;
+    margin-left: 10rem;
+  }
 }
 
