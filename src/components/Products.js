@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-const Categories = () => {
+const Products = () => {
   return (
     <div className="bg-white h-full">
             <div className="relative bg-[#f5d9e4] h-96">
@@ -46,6 +46,6 @@ const Categories = () => {
   )
 }
 
-export default Categories
+export default Products
 
 

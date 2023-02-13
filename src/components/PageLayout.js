@@ -1,11 +1,11 @@
 import Header from "./Header"
-import Categories from "./Categories"
+import Products from "./Products"
 
 const PageLayout = () => {
   return (
     <>
         <Header />
-        <Categories />
+        <Products />
     </>
   )
 }
