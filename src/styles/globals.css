@@ -19,6 +19,9 @@
   .about{
     margin-top: 18rem;
   }
+  .products-title{
+    margin-top: -20rem;
+  }
 }
 
 /* Media inquiries for 784px and below */
@@ -32,8 +35,19 @@
   }
 
   .products-title{
-    margin-top: -20rem;
-    margin-left: 10rem;
+    margin-top: -48rem;
+    margin-left: 5rem;
   }
+
+  .image-controls{
+    top: 0;
+    left: 0;
+  }
+
+  .contacts{
+    margin-top: -32rem;
+  }
+
+
 }
 

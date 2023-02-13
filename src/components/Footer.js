@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 const Footer = () => {
   return (
-    <>
-     <div className="flex items-center h-28 mt-10 mb-10">
+    <div className='contacts'>
+     <div className="flex items-center h-28 mt-10 mb-10" id="contact">
       <div className="w-1/4 h-1 bg-rose-500 rounded-full mr-4"></div>
       <div className="w-10 h-10 -ml-5 bg-rose-500 rounded-full mr-4"></div>
       <div className="text-rose-600 font-playfair font-bold text-3xl uppercase">Reach out</div>
@@ -105,7 +105,7 @@ const Footer = () => {
         </div>
         
     </footer>
-    </>
+    </div>
   )
 }
 

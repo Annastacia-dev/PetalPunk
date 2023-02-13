@@ -40,10 +40,10 @@ const NavBar = () => {
           <Link href="/">
             <li className="p-4 font-semibold">Home</li>
           </Link>
-          <Link href="/about">
+          <Link href="#about">
             <li className="p-4 font-semibold">About</li>
           </Link>
-          <Link href="/contact">
+          <Link href="#contact">
             <li className="p-4 font-semibold">Contact</li>
           </Link>
           <Link href="/shop">
@@ -80,10 +80,10 @@ const NavBar = () => {
           }
         >
           <ul onClick={toggleNav} className="text-center">
-            <Link href="/#about">
+            <Link href="#about">
               <li className="p-4 text-2xl border-b border-white">About</li>
             </Link>
-            <Link href="/#services">
+            <Link href="#contact">
               <li className="p-4 text-2xl border-b border-white">Contact</li>
             </Link>
             <Link href="/shop">

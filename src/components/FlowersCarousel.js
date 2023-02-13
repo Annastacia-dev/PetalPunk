@@ -34,7 +34,7 @@ const Carousel = () => {
 
   return (
     <>
-    <h1 className='text-2xl font-bold text-center font-playfair mt-5 mb-10 text-rose-600 uppercase'>
+    <h1 className='text-3xl tracking-widest font-bold text-center font-playfair mt-5 mb-10 text-rose-600 uppercase'>
     Flowers from the heart
     </h1>
     <div className="relative overflow-hidden h-screen p-10">
@@ -61,7 +61,8 @@ const Carousel = () => {
             height={1080}
         />
       </div>
-      <div className="absolute bottom-0 w-full gap-3 flex justify-center pb-4">
+      <div className="absolute bottom-0 w-full gap-3 flex justify-center
+       pb-4 image-controls">
         {images.map((_, index) => (
           <button
             key={index}
