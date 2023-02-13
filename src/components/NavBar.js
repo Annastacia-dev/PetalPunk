@@ -12,7 +12,7 @@ const NavBar = () => {
 
   useEffect(() => {
     const changeBackground = () => {
-      if (window.scrollY >= 80) {
+      if (window.scrollY >= 40) {
         setBackgroundColor("#f5d9e4");
       } else {
         setBackgroundColor("transparent");
