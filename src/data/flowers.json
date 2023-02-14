@@ -4,8 +4,143 @@
             "id":1,
             "name":"Spring Fling",
             "image":"https://images.unsplash.com/photo-1583228858294-6745cb25969e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zmxvd2VycyUyMGJvdXF1ZXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-            "description":"A beautiful bouquet of spring flowers",
-            "price": 100
+            "description":"A mix of colorful spring blooms that will bring cheer to any space",
+            "price": 26.58
+        },
+        {
+            "id":2,
+            "name":"Summer Breeze",
+            "image":"https://i.pinimg.com/236x/3a/0f/3e/3a0f3e7b7f0e4714239f46ae9bd7708d.jpg",
+            "description":"Elegant bouquet of lush, pastel-colored flowers",
+            "price": 35.99
+        },
+        {
+            "id":3,
+            "name":"Bright Delight",
+            "image":"https://i.pinimg.com/236x/36/ad/31/36ad3170090ceb7822b2b957868fc97f.jpg",
+            "description":"A vibrant and cheerful bouquet of bright, bold blooms",
+            "price": 29.99
+        },
+        {
+            "id":4,
+            "name":"English Garden",
+            "image":"https://i.pinimg.com/236x/6a/e8/5b/6ae85b6612c31418ec36bf513f5fc30e.jpg",
+            "description":"A green and fresh-feeling mix of our fine flowers",
+            "price": 18.45
+        },
+        {
+            "id":5,
+            "name":"Pretty in Pink",
+            "image":"https://i.pinimg.com/236x/31/1a/25/311a25cc6041f3b07c1e5cd069880722.jpg",
+            "description":"A sweet and delicate bouquet of pink flowers.",
+            "price": 22.56
+        },
+        {
+            "id":6,
+            "name":"Sunflower Surprise",
+            "image":"https://i.pinimg.com/236x/fa/d9/bc/fad9bcc719931cd5e0133644d27bf1f9.jpg",
+            "description":"Bold and beautiful arrangement featuring sunflowers and other seasonal blooms.",
+            "price": 21.53
+        },
+        {
+            "id":7,
+            "name":"Rainbow Blooms",
+            "image":"https://i.pinimg.com/236x/b7/a1/19/b7a119b794810ba4a4a42da7ed3fe8fb.jpg",
+            "description":"A colorful and playful bouquet of mixed flowers in every shade of the rainbow.",
+            "price": 20.44
+        },
+        {
+            "id":8,
+            "name":"Garden Party",
+            "image":"https://i.pinimg.com/236x/28/77/b6/2877b6475236208cab382885c8e85b07.jpg",
+            "description":"Fresh and fragrant bouquet of summer flowers that will transport you to a garden party.",
+            "price": 19.89
+        },
+        {
+            "id":9,
+            "name":"Tropical Oasis",
+            "image":"https://i.pinimg.com/236x/60/33/f5/6033f54e53506c488e571f32c0575d75.jpg",
+            "description":"A lush and exotic bouquet of tropical blooms and foliage.",
+            "price":18.56
+        },
+        {
+            "id":10,
+            "name":"Wildflower Fields",
+            "image":"https://i.pinimg.com/236x/5f/c9/8e/5fc98e345d0e2a6825c89d5284b6575d.jpg",
+            "description":"Natural and rustic bouquet of wildflowers in earthy tones.",
+            "price": 20.56
+        },
+        {
+            "id":11,
+            "name":"Pink Passion",
+            "image":"https://i.pinimg.com/236x/6c/54/0b/6c540b314fc6169583fee1e51c6d3d00.jpg",
+            "description":"A romantic and passionate bouquet of pink roses and other blooms.",
+            "price":23.78
+        },
+        {
+            "id":12,
+            "name":"Classic White",
+            "image":"https://i.pinimg.com/236x/be/ff/78/beff78d36fa9e690c5f85a86fbfb4258.jpg",
+            "description":"Timeless and elegant bouquet of white flowers.",
+            "price": 30.99
+        },
+        {
+            "id":13,
+            "name":"Vibrant Beauty",
+            "image":"https://i.pinimg.com/236x/40/84/dc/4084dc38018a63a04d4e77d5a63c0a3e.jpg",
+            "description":"Vibrant and bold bouquet of mixed flowers that will make a statement.",
+            "price":24.56
+        },
+        {
+            "id": 14,
+            "name":"Dazzling Dahlias",
+            "image":"https://i.pinimg.com/236x/a1/9f/f1/a19ff169d15d61c56682a233a3c9a6b0.jpg",
+            "description":"A beautiful and textured bouquet featuring dahlias in a range of colors.",
+            "price":22.18
+        },
+        {
+            "id": 15,
+            "name":"Purple Haze",
+            "image":"https://i.pinimg.com/236x/62/6b/0d/626b0d2f1634e7669b1342aa42b78caa.jpg",
+            "description":"A dreamy and moody bouquet of purple flowers.",
+            "price":27.92
+        },
+        {
+            "id": 16,
+            "name":"Enchanted Garden",
+            "image":"https://i.pinimg.com/236x/22/f0/43/22f04397a1c7b60df55516228da5423b.jpg",
+            "description":"A magical and romantic bouquet of lush flowers and trailing vines.",
+            "price": 25.90
+        },
+        {
+            "id": 17,
+            "name":"Citrus Splash",
+            "image":"https://i.pinimg.com/236x/dc/be/cd/dcbecd224d6a52464f15c25f4366eb95.jpg",
+            "description":"A refreshing and zesty bouquet of citrus-colored blooms.",
+            "price": 23.71
+        },
+        {
+            "id": 18,
+            "name":"Pure Love",
+            "image":"https://i.pinimg.com/236x/cf/9f/5a/cf9f5a5e4918d7f1afb765969c900a04.jpg",
+            "description":"A pure and delicate bouquet of white and cream-colored flowers.",
+            "price": 20.96
+        },
+        {
+            "id":19,
+            "name":"Peachy Keen",
+            "image":"https://i.pinimg.com/236x/2f/b4/4a/2fb44aea516fa4d0cde5ad4f105cc21f.jpg",
+            "description":"A soft and feminine bouquet of peach-colored blooms.",
+            "price": 27.02
+        },
+        {
+            "id":20,
+            "name":"Bright Lights",
+            "image":"https://i.pinimg.com/236x/a9/bf/87/a9bf87fbc05f44a35e55e203a273c6fd.jpg",
+            "description":"A bright and bold bouquet of mixed flowers in electric colors.",
+            "price": 30.44
         }
+        
+
     ]
 }
