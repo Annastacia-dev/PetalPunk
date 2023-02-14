@@ -34,15 +34,15 @@ const Carousel = () => {
 
   return (
     <>
-    <h1 className='text-3xl tracking-wide font-bold text-center font-playfair mt-10 mb-10 text-rose-600 uppercase'>
+    <h1 className='text-3xl tracking-wide font-bold text-center font-playfair mt-20  text-rose-600 uppercase'>
     Flowers from the heart
     </h1>
-    <div className="relative overflow-hidden h-screen p-10">
+    <div className="relative mt-10 overflow-hidden sm:h-screen h-full p-10">
       <div className="hidden sm:block sm:absolute top-0 left-0 w-full h-full">
         {images.map((image, index) => (
           <Image
             key={index}
-            className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-300 ease-in-out ${
+            className={`absolute inset-0 sm:h-full w-full object-cover object-center transition-opacity duration-300 ease-in-out ${
               index === activeIndex ? "opacity-100" : "opacity-0"
             }`}
             src={image.src}
@@ -61,7 +61,7 @@ const Carousel = () => {
             height={1080}
         />
       </div>
-      <div className="absolute bottom-0 w-full gap-3 flex justify-center
+      <div className="absolute bottom-0  w-full gap-3 flex justify-center
        pb-4 image-controls">
         {images.map((_, index) => (
           <button
@@ -75,6 +75,51 @@ const Carousel = () => {
           />
         ))}
       </div>
+    </div>
+    <div className='flex flex-col items-center justify-center mt-20'>
+    <h1 className='text-3xl tracking-wide font-bold text-center font-playfair   text-rose-600 uppercase'>
+    A flower poem
+    </h1>
+    <div className='sm:text-sm text-xs mt-7 sm:block flex flex-col justify-center items-center'  >
+    <pre className='sm:text-left text-center' >
+    Some men never think of it. 
+    <br />
+    You did. You come along
+    <span className="sm:inline block">
+    And say you nearly brought me flowers 
+    </span>
+    
+    <br />
+    But something had gone wrong.
+    </pre>
+    <br />
+    
+    <pre className='sm:text-center'>
+    The shop was closed. Or you had doubts — 
+    <br />
+    The sort that minds like ours
+    <br /> 
+    Dream up incessantly. You thought 
+    <br />
+    I might not want your flowers.
+    </pre>
+    <br />
+
+    <pre className='sm:text-right text-center'>
+    It made me smile and hug you then.
+    <br />
+    Now I can only smile.
+    <span className="sm:inline block">
+    But, look, the flowers you nearly brought
+    </span>
+    <br />
+    Have lasted all this while.
+    </pre>
+    <br />
+    <cite className='text-xs'>
+    ~from Serious Concerns
+    </cite>
+    </div>
     </div>
     </>
   );

@@ -10,7 +10,7 @@ const Flowers = ({ flowers }) => {
 
 
   return (
-    <section className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6  mt-32 ">
+    <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6  mt-32 ">
       {flowers.map((flower) => (
         <Link key={flower.id} className="flex  flex-col justify-center items-center p-4" href={`/flowers/${flower.name}`}>
           <Image src={flower.image} alt={flower.name} width={200} height={200}
