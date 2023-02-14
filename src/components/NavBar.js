@@ -4,7 +4,6 @@ import { IoIosClose } from "react-icons/io";
 import { BiMenuAltRight } from "react-icons/bi";
 import { FaShoppingBag } from "react-icons/fa";
 import Image from "next/image";
-import { MdArrowDropDown } from "react-icons/md";
 import DropDown from "./DropDown";
 
 
@@ -42,15 +41,15 @@ const NavBar = () => {
           <Link href="/">
             <li className="p-4 font-semibold">Home</li>
           </Link>
-          <Link href="#about">
+          <Link href="/#about">
             <li className="p-4 font-semibold">About</li>
           </Link>
-          <Link href="#contact">
+          <Link href="/#contact">
             <li className="p-4 font-semibold">Contact</li>
           </Link>
-          <p>
+          <div>
             <li className="p-4 font-semibold"><DropDown /></li>
-          </p>
+          </div>
           
           <Link href="/faqs">
             <li className="p-4 font-semibold">FAQs</li>
@@ -83,15 +82,16 @@ const NavBar = () => {
           }
         >
           <ul onClick={toggleNav} className="text-center">
-            <Link href="#about">
+            <Link href="/#about">
               <li className="p-4 text-2xl border-b border-white">About</li>
             </Link>
-            <Link href="#contact">
+            <Link href="/#contact">
               <li className="p-4 text-2xl border-b border-white">Contact</li>
             </Link>
-            <p>
-              <DropDown />
-            </p>
+            <div className="p-4 text-2xl border-b border-white" onClick={(e) => e.stopPropagation()} // on click don't close the menu
+            >
+               <DropDown />
+            </div>
             <Link href="/faqs">
               <li className="p-4 text-2xl border-b border-white">FAQs</li>
             </Link>
