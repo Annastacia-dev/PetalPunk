@@ -2,16 +2,16 @@ import Image from 'next/image'
 
 const Footer = () => {
   return (
-    <div className='contacts'>
-     <div className="flex items-center h-28 mt-10 mb-10" id="contact">
+    <>
+    <div className='contacts relative' id="contact">
+     <div className="flex items-center h-28 mt-10 mb-10">
       <div className="w-1/4 h-1 bg-rose-500 rounded-full mr-4"></div>
       <div className="w-10 h-10 -ml-5 bg-rose-500 rounded-full mr-4"></div>
       <div className="text-rose-600 font-playfair font-bold text-3xl uppercase">Reach out</div>
     </div>
-
-    <footer className="bg-rose-800 h-full relative mt-18">
+    <footer className="bg-rose-800 h-full mt-18">
         <div className="sm:grid grid-cols-4 gap-4 mx-auto sm:px-10 sm:py-10 footer-grids">
-            <div className="sm:col-span-1 border-white border-r-2 flex gap-3 flex-column justify-center items-center">
+            <div className="sm:col-span-1 border-white border-r-2 flex gap-3  justify-center items-center">
                 <Image src="/images/whitelogo.png" width={30} height={30} alt='logo' className='mt-3 ml-3'
                  />
                 <h1 className="text-white mt-3 text-1xl font-bold">Waridi</h1> 
@@ -37,7 +37,7 @@ const Footer = () => {
                     </div>  
                 </div>      
             </div>
-            <div className="sm:col-span-1 border-white border-r-2 flex flex-column justify-center items-center gap-3">   
+            <div className="sm:col-span-1 border-white border-r-2 flex flex-col justify-center items-center gap-3">   
                 <div className='mt-3'>
                     <div className="flex flex-row gap-3 mt-3">
                         <p className="text-white text-1xl uppercase font-bold">store</p>
@@ -56,7 +56,7 @@ const Footer = () => {
                     </div> 
                 </div>      
             </div>
-            <div className="sm:col-span-1 ml-16 sm:ml-0 flex flex-column justify-center items-center gap-3 capitalize">   
+            <div className="sm:col-span-1 ml-16 sm:ml-0 flex flex-col justify-center items-center gap-3 capitalize">   
                 <div className='mt-3'>
                     <div className="flex flex-row gap-3 mt-3">
                         <p className="text-white text-1xl uppercase font-bold">links</p>
@@ -106,6 +106,7 @@ const Footer = () => {
         
     </footer>
     </div>
+</>
   )
 }
 

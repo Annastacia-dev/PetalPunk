@@ -2,8 +2,9 @@
     "flowers":[
         {
             "id":1,
-            "name":"Red Roses",
-            "image":"https://images.unsplash.com/photo-1548094967-e25a127d1f6d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVkJTIwcm9zZXMlMjBib3VxdWV0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+            "name":"Spring Fling",
+            "image":"https://images.unsplash.com/photo-1583228858294-6745cb25969e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zmxvd2VycyUyMGJvdXF1ZXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+            "description":"A beautiful bouquet of spring flowers",
             "price": 100
         }
     ]

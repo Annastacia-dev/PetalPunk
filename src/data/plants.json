@@ -1,0 +1,11 @@
+{
+    "plants":[
+        {
+            "id":1,
+            "name":"Monstera",
+            "image":"https://i.pinimg.com/236x/71/57/21/715721cef5bcf33a255a0b5480e27d1e.jpg",
+            "description":"An indoor plant with large, heart-shaped leaves and a trailing habit.",
+            "price": 20
+        }
+    ]
+}

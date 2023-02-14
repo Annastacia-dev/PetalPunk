@@ -4,6 +4,8 @@ import { IoIosClose } from "react-icons/io";
 import { BiMenuAltRight } from "react-icons/bi";
 import { FaShoppingBag } from "react-icons/fa";
 import Image from "next/image";
+import { MdArrowDropDown } from "react-icons/md";
+import DropDown from "./DropDown";
 
 
 const NavBar = () => {
@@ -46,9 +48,10 @@ const NavBar = () => {
           <Link href="#contact">
             <li className="p-4 font-semibold">Contact</li>
           </Link>
-          <Link href="/shop">
-            <li className="p-4 font-semibold">Shop</li>
-          </Link>
+          <p>
+            <li className="p-4 font-semibold"><DropDown /></li>
+          </p>
+          
           <Link href="/faqs">
             <li className="p-4 font-semibold">FAQs</li>
           </Link>
@@ -86,9 +89,9 @@ const NavBar = () => {
             <Link href="#contact">
               <li className="p-4 text-2xl border-b border-white">Contact</li>
             </Link>
-            <Link href="/shop">
-              <li className="p-4 text-2xl border-b border-white">Shop</li>
-            </Link>
+            <p>
+              <DropDown />
+            </p>
             <Link href="/faqs">
               <li className="p-4 text-2xl border-b border-white">FAQs</li>
             </Link>
