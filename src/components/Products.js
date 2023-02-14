@@ -27,9 +27,9 @@ const Products = () => {
     <div className="h-full">
             <div className="relative bg-rose-50 h-96">
                 <div className='bg-[#f5d9e4]  absolute top-0 right-0 w-1/2 h-full'></div>
-                <div className="top-0 absolute left-6 h-screen border-rose-600 mt-5 border-r-2">
+                <div className="top-0 absolute left-6 h-screen border-rose-600 mt-5 border-r-2 rose-border">
                     <div className="flex flex-col justify-center h-full">
-                        <h1 className="text-rose-600 uppercase text-2xl absolute sm:-left-20 font-bold font-playfair sm:-rotate-90  products-title tracking-wide">
+                        <h1 className="text-rose-600 uppercase text-2xl absolute -left-20 font-bold font-playfair -rotate-90  products-title tracking-wide">
                             our<span className='ml-5'>products</span>
                             </h1>
                     </div>

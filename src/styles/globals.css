@@ -26,8 +26,8 @@
 
 /* Media inquiries for 784px and below */
 @media (max-width: 784px) {
-  .footer-grids{
-    margin-top: 1rem;
+ .header {
+    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("/images/pinkflowers.jpg");
   }
 
   .about{
@@ -35,8 +35,12 @@
   }
 
   .products-title{
-    margin-top: -48rem;
-    margin-left: 5rem;
+    margin-top: 28rem;
+    margin-left: -1.5rem;
+
+  }
+  .rose-border{
+    @apply h-1/2;
   }
 
   .image-controls{
@@ -45,7 +49,7 @@
   }
 
   .contacts{
-    margin-top: -32rem;
+    margin-top: -52rem;
   }
 
 

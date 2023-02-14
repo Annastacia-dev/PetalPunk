@@ -34,7 +34,7 @@ const Carousel = () => {
 
   return (
     <>
-    <h1 className='text-3xl tracking-widest font-bold text-center font-playfair mt-5 mb-10 text-rose-600 uppercase'>
+    <h1 className='text-3xl tracking-wide font-bold text-center font-playfair mt-10 mb-10 text-rose-600 uppercase'>
     Flowers from the heart
     </h1>
     <div className="relative overflow-hidden h-screen p-10">

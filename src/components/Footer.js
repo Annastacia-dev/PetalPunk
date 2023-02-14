@@ -16,10 +16,10 @@ const Footer = () => {
                  />
                 <h1 className="text-white mt-3 text-1xl font-bold">Waridi</h1> 
             </div>  
-            <div className="sm:col-span-1 border-white border-r-2 flex flex-column justify-center items-center gap-3">   
+            <div className="sm:col-span-1 border-white border-r-2 ml-16 sm:ml-0 flex flex-col justify-center items-center gap-3">   
                 <div className='mt-3'>
                     <div className="flex flex-row gap-3 mt-3">
-                        <p className="text-white text-1xl uppercase font-bold">contact us</p>
+                        <p className="text-white text-1xl  uppercase font-bold">contact us</p>
                     </div>
                     <div className="flex flex-row gap-3 mt-3">
                         <i className="fas fa-map-marker-alt text-white text-1xl"></i>
@@ -56,7 +56,7 @@ const Footer = () => {
                     </div> 
                 </div>      
             </div>
-            <div className="sm:col-span-1 flex flex-column justify-center items-center gap-3 capitalize">   
+            <div className="sm:col-span-1 ml-16 sm:ml-0 flex flex-column justify-center items-center gap-3 capitalize">   
                 <div className='mt-3'>
                     <div className="flex flex-row gap-3 mt-3">
                         <p className="text-white text-1xl uppercase font-bold">links</p>

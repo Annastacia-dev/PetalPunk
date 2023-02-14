@@ -1,0 +1,10 @@
+{
+    "flowers":[
+        {
+            "id":1,
+            "name":"Red Roses",
+            "image":"https://images.unsplash.com/photo-1548094967-e25a127d1f6d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVkJTIwcm9zZXMlMjBib3VxdWV0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+            "price": 100
+        }
+    ]
+}
