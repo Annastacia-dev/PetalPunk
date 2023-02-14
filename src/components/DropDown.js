@@ -1,5 +1,6 @@
 import React,{ useState } from 'react'
 import { AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai'
+import Link from 'next/link'
 
 const DropDown = () => {
   const [isOpen, setIsOpen] =useState(false)
@@ -11,11 +12,11 @@ const DropDown = () => {
         {isOpen ? <AiOutlineCaretUp className='ml-1'/> : <AiOutlineCaretDown className='ml-1'/>}
         </button>
         <div className={`absolute top-10 bg-rose-800/80 w-40 h-40 flex flex-col items-center justify-center rounded shadow-lg ${isOpen ? 'block' : 'hidden'}`}>
-            <a href='/flowers' className='text-white text-center'>Flowers</a>
+            <Link href='/flowers' className='text-white text-center'>Flowers</Link>
             <hr className='w-3/4 my-2'/>
-            <a href='/plants' className='text-white text-center'>Plants</a>
+            <Link href='/plants' className='text-white text-center'>Plants</Link>
             <hr className='w-3/4 my-2'/>
-            <a href='/gifts' className='text-white text-center'>Gifts</a>
+            <Link href='/gifts' className='text-white text-center'>Gifts</Link>
         </div>
     </div>
   )
