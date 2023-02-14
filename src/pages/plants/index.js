@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Plants = ({ plants }) => {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mt-32 ">
+    <section className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 mt-32 ">
       {plants.map((plant) => (
         <Link key={plant.id} className="flex flex-col justify-center items-center p-4"
         href={`/plants/${plant.name}`}>

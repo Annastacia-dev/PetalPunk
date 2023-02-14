@@ -34,8 +34,9 @@ const NavBar = () => {
   return (
     <div style={{ backgroundColor: `${backgroundColor}` }} className="fixed left-0 top-0 w-full z-10 ease-in duration-300">
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-3 h-22">
-        <Link  href="/">
+        <Link className="flex flex-row gap-3 justify-center items-center"  href="/">
             <Image src="/images/logo.png" width={30} height={30} alt='logo' />
+            <span className="mt-1 text-md text-center font-bold text-[#da207a]">Waridi</span>
         </Link>
         <ul className=" text-black hidden sm:flex">
           <Link href="/">
