@@ -22,6 +22,18 @@
   .products-title{
     margin-top: -20rem;
   }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    border: 2px solid rgb(244 63 94);
+  }
+
 }
 
 /* Media inquiries for 784px and below */

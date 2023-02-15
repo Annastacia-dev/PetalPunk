@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 const Flower = ({ flower }) => {
+
   return (
     <section className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-5 gap-4 mt-32 ml-20 ">
         <div className="flex flex-col justify-center items-center p-4">
