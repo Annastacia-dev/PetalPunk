@@ -38,10 +38,10 @@ const Products = () => {
                     {
                         products.map((product) => (
                             <div className="flex justify-center" key={product.id}>
-                                <div className="bg-white max-w-sm">
+                                <div className="bg-[#f9fcf6] max-w-sm">
                                     <a href={`/${product.name}`}  data-mdb-ripple="true" data-mdb-ripple-color="light">
                                         <Image src={product.image} width={300} height={300} alt={product.name}
-                                        className="w-auto transform transition-all duration-300 hover:scale-150"
+                                        className=" transform transition-all duration-300 hover:scale-150"
                                         onMouseOver={e => (e.currentTarget.style.transform = 'scale(1.05)')}
                                         onMouseOut={e => (e.currentTarget.style.transform = 'scale(1)')}
                                         />

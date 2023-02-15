@@ -7,6 +7,9 @@
     scroll-behavior: smooth;
     @apply font-poppins;
   } 
+  body{
+    background-color: #f9fcf6;
+  }
   .header {
     background-image: url("/images/pinkflowers.jpg");
     background-size: cover;
@@ -43,7 +46,7 @@
   }
 
   .about{
-    margin-top: 85rem;
+    margin-top: 88rem;
   }
 
   .products-title{
@@ -60,9 +63,6 @@
     left: 0;
   }
 
-  .contacts{
-    margin-top: -1rem;
-  }
 
 
 }
