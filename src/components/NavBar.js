@@ -14,7 +14,7 @@ const NavBar = () => {
   useEffect(() => {
     const changeBackground = () => {
       if (window.scrollY >= 40) {
-        setBackgroundColor("#f5d9e4");
+        setBackgroundColor("#f9fcf6");
       } else {
         setBackgroundColor("transparent");
       }
@@ -36,7 +36,7 @@ const NavBar = () => {
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-3 h-22">
         <Link className="flex flex-row gap-3 justify-center items-center"  href="/">
             <Image src="/images/logo.png" width={30} height={30} alt='logo' />
-            <span className="mt-1 text-md text-center font-bold text-[#da207a]">Waridi</span>
+            <span className="mt-1 text-md text-center font-playfair font-bold text-[#da207a]">Waridi</span>
         </Link>
         <ul className=" text-black hidden sm:flex">
           <Link href="/">
