@@ -4,10 +4,10 @@ import { CartProvider } from '@/contexts/cart'
 
 export default function App({ Component, pageProps }) {
   return (
-    <MainComponentLayout>
-      <CartProvider>
-        <Component {...pageProps} />
-      </CartProvider>
-    </MainComponentLayout>
+    <CartProvider>
+      <MainComponentLayout>
+          <Component {...pageProps} /> 
+      </MainComponentLayout>
+    </CartProvider>
   )
 }

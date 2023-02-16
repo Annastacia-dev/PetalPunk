@@ -5,11 +5,15 @@ import { BiMenuAltRight } from "react-icons/bi";
 import { FaShoppingBag } from "react-icons/fa";
 import Image from "next/image";
 import DropDown from "./DropDown";
+import { useContext } from "react";
+import { CartContext } from "../contexts/cart";
 
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
   const [backgroundColor, setBackgroundColor] = useState("transparent");
+
+  const { cartItems } = useContext(CartContext)
 
   useEffect(() => {
     const changeBackground = () => {
@@ -57,6 +61,9 @@ const NavBar = () => {
           </Link>
           <Link href="/cart" className="p-4 font-semibold mt-0.5">
             <FaShoppingBag />
+            <span className="absolute top-6 right-12 w-4 h-4 bg-rose-500/80 rounded-full flex justify-center items-center text-white text-xs">
+              {cartItems.length}
+            </span>
           </Link>
         </ul>
 
