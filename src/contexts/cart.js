@@ -24,13 +24,13 @@ const CartProvider = ({ children }) => {
     const removeFromCart = (item) => {
         const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id);
     
-        if (isItemInCart.quantity === 1) {
+        if (isItemInCart.quantity !== undefined && isItemInCart.quantity === 1) {
         setCartItems(cartItems.filter((cartItem) => cartItem.id !== item.id));
         } else {
         setCartItems(
             cartItems.map((cartItem) =>
             cartItem.id === item.id
-                ? { ...cartItem, quantity: cartItem.quantity - 1 }
+                ? { ...cartItem, quantity: Math.max(0, cartItem.quantity - 1) }
                 : cartItem
             )
         );
