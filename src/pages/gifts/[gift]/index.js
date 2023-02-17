@@ -7,7 +7,7 @@ import { BsFillBookmarkStarFill } from "react-icons/bs";
 
 const Gift = ({ gift }) => {
 
-    const { cartItems, removeFromCart, addToCart, wishlistItems, addToWishlist} = useContext(CartContext)
+    const { cartItems, removeFromCart, addToCart, wishlistItems, addToWishlist, removeFromWishlist} = useContext(CartContext)
 
     const showQuantitySelector = cartItems.find((item) => item.name === gift.name)?.quantity > 0
 
@@ -32,7 +32,9 @@ const Gift = ({ gift }) => {
                     <div className="flex flex-col justify-center items-center mt-10 ">
                         <button className="border-rose-500 border-2 text-rose-500 p-2 flex justify-center items-center gap-3 sm:w-auto w-44"
                         onClick={() => {
-                            addToCart(gift)}}>
+                            addToCart(gift)
+                            removeFromWishlist(gift)
+                            }}>
                             <FaShoppingBag className='ml-2'  />
                             <span className='text-sm font-medium mr-2'>Add to cart</span>
                         </button>
