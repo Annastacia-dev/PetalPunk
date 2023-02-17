@@ -6,98 +6,112 @@
         "name": "Snake Plant",
         "image": "https://i.pinimg.com/236x/92/76/c9/9276c9502824266efb529c4804a46570.jpg",
         "description": "Easy-to-care-for plant that purifies the air.",
-        "price": 28.99
+        "price": 28.99,
+        "rating": 4.5
       },
       {
         "id": 2,
         "name": "Spider Plant",
         "image": "https://i.pinimg.com/236x/4d/b9/32/4db932c7e03bf6a5fdc901bde0c9b43a.jpg",
         "description": "Produces small, white flowers and is safe for pets.",
-        "price": 15.50
+        "price": 15.50,
+        "rating": 4.5
       },
       {
         "id": 3,
         "name": "Monstera",
         "image": "https://i.pinimg.com/236x/92/91/0d/92910d71aca3d5a81a7b5e47706bcf5c.jpg",
         "description": "Large, tropical plant with unique leaves.",
-        "price": 49.95
+        "price": 49.95,
+        "rating": 4.5
       },
       {
         "id": 4,
         "name": "Pothos",
         "image": "https://i.pinimg.com/236x/45/a8/60/45a86021545c44766cf836c97700f9dc.jpg",
         "description": "Ideal for low-light environments and easy to propagate.",
-        "price": 20.75
+        "price": 20.75,
+        "rating": 4.5
       },
       {
         "id": 5,
         "name": "ZZ Plant",
         "image": "https://i.pinimg.com/736x/5e/a9/5e/5ea95e1fd55bb167494a8ddae598dd52.jpg",
         "description": "Drought-tolerant and low-maintenance.",
-        "price": 38.00
+        "price": 38.00,
+        "rating": 4.5
       },
       {
         "id": 6,
         "name": "Peace Lily",
         "image": "https://i.pinimg.com/236x/ac/c1/df/acc1dfe4d33b59b4e7425a91bcc9c228.jpg",
         "description": "Produces white flowers and is easy to care for.",
-        "price": 25.99
+        "price": 25.99,
+        "rating": 4.5
       },
       {
         "id": 7,
         "name": "Rubber Plant",
         "image": "https://i.pinimg.com/236x/36/a4/58/36a458e7b6835a18ad4bebe14a91786e.jpg",
         "description": "Large, glossy leaves and easy to care for.",
-        "price": 44.50
+        "price": 44.50,
+        "rating": 4.5
       },
       {
         "id": 8,
         "name": "Bird of Paradise",
         "image": "https://i.pinimg.com/236x/54/56/eb/5456eb7a65fc3837158af161013b55e7.jpg",
         "description": "Tropical plant with large, colorful flowers.",
-        "price": 49.00
+        "price": 49.00,
+        "rating": 4.5
       },
       {
         "id": 9,
         "name": "Fiddle Leaf Fig",
         "image": "https://i.pinimg.com/236x/c6/3e/e3/c63ee38dec52c2d5a2490a46985ff7d4.jpg",
         "description": "Popular indoor plant with large, violin-shaped leaves.",
-        "price": 46.00
+        "price": 46.00,
+        "rating": 4.5
       },
       {
         "id": 10,
         "name": "Boston Fern",
         "image": "https://i.pinimg.com/236x/0a/47/84/0a4784b16a835b30e1829cafe1af272d.jpg",
         "description": "Easy to care for and adds a touch of green to any room.",
-        "price": 22.00
+        "price": 22.00,
+        "rating": 4.5
       },
       {
         "id": 11,
         "name": "Aloe Vera",
         "image": "https://i.pinimg.com/236x/20/85/7c/20857cd18271ba39b06d533fd6695b2c.jpg",
         "description": "Succulent with medicinal properties and easy to care for.",
-        "price": 17.50
+        "price": 17.50,
+        "rating": 4.5
       },
       {
         "id": 12,
         "name": "Golden Pothos",
         "image": "https://i.pinimg.com/236x/00/57/ee/0057ee1d6258c959f86a177110a473b4.jpg",
         "description": "Trailing vine that is easy to care for and adds a pop of green.",
-        "price": 18.99
+        "price": 18.99,
+        "rating": 4.5
       },
       {
         "id": 13,
         "name": "Maidenhair Fern",
         "image": "https://i.pinimg.com/236x/11/b3/1b/11b31b3ffc950c6de91776b3e61c992e.jpg",
         "description": "Delicate, lacy leaves and prefers high humidity.",
-        "price": 27.00
+        "price": 27.00,
+        "rating": 4.5
       },
       {
         "id": 14,
         "name": "String of Pearls",
         "image": "https://i.pinimg.com/236x/b1/e7/ee/b1e7eee84603ffbbdd856d133390ed37.jpg",
         "description": "Delicate, trailing succulent with small, round leaves.",
-        "price": 29.32
+        "price": 29.32,
+        "rating": 4.5
       }
 
     ]

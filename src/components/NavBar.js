@@ -7,13 +7,14 @@ import Image from "next/image";
 import DropDown from "./DropDown";
 import { useContext } from "react";
 import { CartContext } from "../contexts/cart";
+import { BsFillBookmarkStarFill } from "react-icons/bs";
 
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
   const [backgroundColor, setBackgroundColor] = useState("transparent");
 
-  const { cartItems } = useContext(CartContext)
+  const { cartItems, wishlistItems } = useContext(CartContext)
 
   useEffect(() => {
     const changeBackground = () => {
@@ -44,27 +45,36 @@ const NavBar = () => {
         </Link>
         <ul className=" text-black hidden sm:flex">
           <Link href="/">
-            <li className="p-4 font-semibold">Home</li>
+            <li className="p-4 font-semibold hover:text-rose-500">Home</li>
           </Link>
           <Link href="/#about">
-            <li className="p-4 font-semibold">About</li>
+            <li className="p-4 font-semibold hover:text-rose-500">About</li>
           </Link>
           <Link href="/#contact">
-            <li className="p-4 font-semibold">Contact</li>
+            <li className="p-4 font-semibold hover:text-rose-500">Contact</li>
           </Link>
           <div>
-            <li className="p-4 font-semibold"><DropDown /></li>
+            <li className="p-4 font-semibold hover:text-rose-500"><DropDown /></li>
           </div>
           
           <Link href="/faqs">
-            <li className="p-4 font-semibold">FAQs</li>
+            <li className="p-4 font-semibold hover:text-rose-500">FAQs</li>
           </Link>
-          <Link href="/cart" className="p-4 font-semibold mt-0.5">
-            <FaShoppingBag />
-            <span className="absolute top-6 right-12 w-4 h-4 bg-rose-500/80 rounded-full flex justify-center items-center text-white text-xs">
+
+          <Link href="/cart" className="p-4 font-semibold cart-icon relative mt-0.5 hover:text-rose-500">
+            <FaShoppingBag title="Cart" />
+            <span className="absolute top-3 right-1 w-4 h-4 bg-rose-500/80 rounded-full flex justify-center items-center text-white text-xs">
               {cartItems.length}
             </span>
           </Link>
+
+          <Link href="/wishlist" className="p-4 font-semibold cart-icon relative mt-0.5 hover:text-rose-500">
+            <BsFillBookmarkStarFill title="Wishlist" />
+            <span className="absolute top-3 right-1 w-4 h-4 bg-rose-500/80 rounded-full flex justify-center items-center text-white text-xs">
+              {wishlistItems.length}
+            </span>
+          </Link>
+
         </ul>
 
         {/*Mobile button /> */}

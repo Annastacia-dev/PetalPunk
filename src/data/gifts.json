@@ -5,133 +5,152 @@
         "name": "Festive Cheer",
         "image": "https://i.pinimg.com/236x/85/4e/01/854e01a38ca0639a1ad5098d2dd1ecee.jpg",
         "price": 34.99,
-        "description": "Spread some holiday cheer with this festive gift box!"
+        "description": "Spread some holiday cheer with this festive gift box!",
+        "rating": 4.5
       },
       {
         "id": 2,
         "name": "Sweet Treats",
         "image": "https://i.pinimg.com/236x/be/fd/0f/befd0f780ef7af32bc492d4194aea8ff.jpg",
         "price": 22.50,
-        "description": "Indulge in some delicious sweets with this gift box."
+        "description": "Indulge in some delicious sweets with this gift box.",
+        "rating": 4.5
       },
       {
         "id": 3,
         "name": "Spa Day",
         "image": "https://i.pinimg.com/236x/76/3d/66/763d66ee3e3211c33a726f59fa3ce3d6.jpg",
         "price": 49.99,
-        "description": "Relax and unwind with this spa-themed gift box."
+        "description": "Relax and unwind with this spa-themed gift box.",
+        "rating": 4.5
       },
       {
         "id": 4,
         "name": "Winter Warmth",
         "image": "https://i.pinimg.com/236x/3e/25/c5/3e25c5480bc1018ff937e82fcf79b325.jpg",
         "price": 17.99,
-        "description": "Stay warm and cozy this winter with this gift box."
+        "description": "Stay warm and cozy this winter with this gift box.",
+        "rating": 4.5
       },
       {
         "id": 5,
         "name": "Movie Night",
         "image": "https://i.pinimg.com/236x/79/e9/07/79e90764c5fe8f82d5ba7d46b5b35e8a.jpg",
         "price": 29.99,
-        "description": "Enjoy a movie night in with this gift box."
+        "description": "Enjoy a movie night in with this gift box.",
+        "rating": 4.5
       },
       {
         "id": 6,
         "name": "Game Night",
         "image": "https://i.pinimg.com/236x/e3/04/ca/e304ca8d648c86472593dab3042cd12d.jpg",
         "price": 44.00,
-        "description": "Have some fun with friends or family with this game-themed gift box."
+        "description": "Have some fun with friends or family with this game-themed gift box.",
+        "rating": 4.5
       },
       {
         "id": 7,
         "name": "Home Decor",
         "image": "https://i.pinimg.com/236x/d8/a3/6c/d8a36c5b185f31d5aad5b7f9b2a68b44.jpg",
         "price": 25.99,
-        "description": "Add some style to your home with this gift box full of decor items."
+        "description": "Add some style to your home with this gift box full of decor items.",
+        "rating": 4.5
       },
       {
         "id": 8,
         "name": "Coffee Lover",
         "image": "https://i.pinimg.com/236x/8e/08/38/8e08389ed0e48cffdbdb48ebfd4ca32a.jpg",
         "price": 38.75,
-        "description": "For the coffee lover in your life, this gift box has everything they need."
+        "description": "For the coffee lover in your life, this gift box has everything they need.",
+        "rating": 4.5
       },
       {
         "id": 9,
         "name": "Tea Time",
         "image": "https://i.pinimg.com/236x/37/53/d7/3753d72de501aee33da26685248c559e.jpg",
         "price": 19.99,
-        "description": "Relax with a cup of tea with this gift box full of tea-related items."
+        "description": "Relax with a cup of tea with this gift box full of tea-related items.",
+        "rating": 4.5
       },
       {
         "id": 10,
         "name": "Chocolate Indulgence",
         "image": "https://i.pinimg.com/236x/3c/43/c8/3c43c8080111c6f69daf3d951731061a.jpg",
         "price": 42.00,
-        "description": "Satisfy your sweet tooth with this chocolate-themed gift box."
+        "description": "Satisfy your sweet tooth with this chocolate-themed gift box.",
+        "rating": 4.5
       },
       {
         "id": 11,
         "name": "Artistic Inspiration",
         "image": "https://i.pinimg.com/236x/6b/95/b9/6b95b9315bd507f3dc2f18d158b31812.jpg",
         "description": "This gift box is perfect for the artist in your life.",
-        "price": 49.99
+        "price": 49.99,
+        "rating": 4.5
         },
         {
             "id":12,
             "name":"Moon & Back",
             "image":"https://i.pinimg.com/736x/80/47/e7/8047e7a84a14b7e15ccafd9ac76f4ad7.jpg",
             "description":"Gift set for Him - Stripes Ceramic cup, Handkerchief with Brooch and Candy Box",
-            "price": 76.99
+            "price": 76.99,
+            "rating": 4.5
         },
         {
           "id":13,
           "name":"Tech-Tastic",
           "image":"https://i.pinimg.com/236x/cd/40/74/cd40745de2d8f9abf059b61094ac954c.jpg",
           "description":"A box filled with the latest and greatest tech gadgets and accessories for the tech lover in your life.",
-          "price": 199.99
+          "price": 199.99,
+          "rating": 4.5
       },
       {
         "id":14,
         "name":"Pet Parent's Paradise",
         "image":"https://i.pinimg.com/736x/80/47/e7/8047e7a84a14b7e15ccafd9ac76f4ad7.jpg",
         "description":"A box filled with pet toys, treats, and accessories for the devoted pet parent.",
-        "price": 38.89
+        "price": 38.89,
+        "rating": 4.5
     },
     {
         "id":15,
         "name":"Time to Wine Down",
         "image":"https://i.pinimg.com/236x/5c/c3/40/5cc34021c38e6918bb83162ed97e95c8.jpg",
         "description":"A box filled with wine-related items such as glasses, corkscrews, and wine charms for the wine enthusiast.",
-        "price": 59.99
+        "price": 59.99,
+        "rating": 4.5
     },
     {
         "id":16,
         "name":"Music Madness",
         "image":"https://i.pinimg.com/236x/90/84/52/9084529aa7889af51aaf91677529a07d.jpg",
         "description":"A box filled with music-themed items such as concert tickets, vinyl records, and band merchandise.",
-        "price": 59.99
+        "price": 59.99,
+        "rating": 4.5
     },
     {
         "id":17,
         "name":"Book Lover's Delight",
         "image":"https://i.pinimg.com/236x/ee/39/25/ee39255526d990fc673a246581d39d2b.jpg",
         "description":"A box filled with new and classic books and cozy reading accessories for the avid reader.",
-        "price": 69.58
+        "price": 69.58,
+        "rating": 4.5
     },
     {
         "id":18,
         "name":"Fitness Fanatic",
         "image":"https://i.pinimg.com/236x/cb/f4/c8/cbf4c82a22b820dc232604f53c20dda8.jpg",
         "description":"A box filled with workout gear, healthy snacks, and other items to help support a healthy lifestyle.",
-        "price": 38.87
+        "price": 38.87,
+        "rating": 4.5
     },
     {
         "id":19,
         "name":"Classic Black",
         "image":"https://i.pinimg.com/236x/24/07/3b/24073b9fd39c9734075a41577e9adff3.jpg",
         "description":"The classic black gift box is a timeless and elegant option for presenting any gift and for any occassion.",
-        "price": 59.99
+        "price": 59.99,
+        "rating": 4.5
     }
   ]
 }
