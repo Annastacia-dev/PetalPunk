@@ -3,10 +3,11 @@ import { useContext, useState } from 'react'
 import makeStars  from '../../../utils/makeStars'
 import { CartContext } from '../../../contexts/cart'
 import { FaShoppingBag } from "react-icons/fa";
+import { BsFillBookmarkStarFill } from "react-icons/bs";
 
 const Gift = ({ gift }) => {
 
-    const { cartItems, removeFromCart, addToCart,  } = useContext(CartContext)
+    const { cartItems, removeFromCart, addToCart, wishlistItems, addToWishlist} = useContext(CartContext)
 
     const showQuantitySelector = cartItems.find((item) => item.name === gift.name)?.quantity > 0
 
@@ -24,11 +25,14 @@ const Gift = ({ gift }) => {
             </p>
             <p className="text-xs text-left border-t-2 mt-3 leading-6">{gift.description}</p>
 
+            <div className="flex sm:flex-row flex-col sm:gap-5 sm:ml-0 ml-8 justify-center items-center sm:mt-10 -mt-4">
+
             {
                 !showQuantitySelector && (
-                    <div className="flex flex-col justify-center items-center mt-10 lg:ml-28 md:ml-44">
-                        <button className="border-rose-500 border-2 text-rose-500 p-2 flex justify-center items-center gap-3"
-                        onClick={() => {addToCart(gift)}}>
+                    <div className="flex flex-col justify-center items-center mt-10 ">
+                        <button className="border-rose-500 border-2 text-rose-500 p-2 flex justify-center items-center gap-3 sm:w-auto w-44"
+                        onClick={() => {
+                            addToCart(gift)}}>
                             <FaShoppingBag className='ml-2'  />
                             <span className='text-sm font-medium mr-2'>Add to cart</span>
                         </button>
@@ -37,10 +41,12 @@ const Gift = ({ gift }) => {
             }
 
             {
-                showQuantitySelector && (
+                showQuantitySelector &&  (
                     <div className="flex flex-row gap-2 justify-center items-center mt-10 lg:ml-28 md:ml-44">
                         <button className="border-rose-500 border-2 text-rose-500 p-2 w-10 h-8 flex justify-center items-center"
-                        onClick={() => {removeFromCart(gift)}}
+                        onClick={() => {
+                            removeFromCart(gift)
+                        }}
                         >-</button>
                         <p className="text-rose-500 text-lg font-bold mx-2">
                             {cartItems.find((item) => item.name === gift.name)?.quantity || 0}
@@ -52,6 +58,23 @@ const Gift = ({ gift }) => {
                 )
 
             }
+
+            {
+                !showQuantitySelector && (
+                    !wishlistItems.find((item) => item.name === gift.name) && (
+                        <div className="flex flex-col justify-center items-center sm:mt-10 mt-6">
+                            <button className="border-rose-500 border-2 text-rose-500 p-2 flex justify-center items-center gap-3 sm:w-auto w-44"
+                            onClick={() => {addToWishlist(gift)}}>
+                                <BsFillBookmarkStarFill className='ml-2'  />
+                                <span className='text-sm font-medium mr-2'>Add to wishlist</span>
+                            </button>
+                        </div>
+                    )
+                )
+            }
+
+            </div>
+
 
             </div>
 

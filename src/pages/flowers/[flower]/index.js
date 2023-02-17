@@ -7,10 +7,7 @@ import { BsFillBookmarkStarFill } from "react-icons/bs";
 
 const Flower = ({ flower }) => {
 
-    const { cartItems, removeFromCart, addToCart, wishlistItems, addToWishlist, removeFromWishlist } = useContext(CartContext)
-
-    const [showWishListButton, setShowWishListButton] = useState(true)
-
+    const { cartItems, removeFromCart, addToCart, wishlistItems, addToWishlist } = useContext(CartContext)
 
     // if flower is in cart & quantity > 0, show quantity selector
     // if flower is in cart & quantity === 0, hide quantity selector
@@ -71,7 +68,7 @@ const Flower = ({ flower }) => {
             {/* add to wishlist */}
 
             {
-                showWishListButton &&  !showQuantitySelector && (
+                !showQuantitySelector && (
                     !wishlistItems.find((item) => item.name === flower.name) && (
                         <div className="flex flex-col justify-center items-center sm:mt-10 mt-6">
                             <button className="border-rose-500 border-2 text-rose-500 p-2 flex justify-center items-center gap-3 sm:w-auto w-44"
