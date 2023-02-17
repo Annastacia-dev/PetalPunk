@@ -2,12 +2,29 @@ import Image from 'next/image'
 import { useContext, useState } from 'react'
 import makeStars  from '../../../utils/makeStars'
 import { CartContext } from '../../../contexts/cart'
+import { FaShoppingBag } from "react-icons/fa";
 
 const Flower = ({ flower }) => {
 
     const { cartItems, removeFromCart, addToCart,  } = useContext(CartContext)
 
-    const [showQuantitySelector, setShowQuantitySelector] = useState(false)
+    console.log(cartItems)
+
+    // const [showQuantitySelector, setShowQuantitySelector] = useState()
+
+    // if flower is in cart & quantity > 0, show quantity selector
+    // if flower is in cart & quantity === 0, hide quantity selector
+    // if flower is not in cart, hide quantity selector
+
+    const showQuantitySelector = cartItems.find((item) => item.name === flower.name)?.quantity > 0
+
+    
+
+    
+
+
+
+
 
     
   return (
@@ -24,22 +41,34 @@ const Flower = ({ flower }) => {
         </p>
         <p className="text-xs text-left border-t-2 mt-3 leading-6">{flower.description}</p>
 
-        <div className="flex flex-col justify-center items-center mt-10 lg:ml-32 md:ml-44">
-            <button onClick={() => addToCart(flower)} className="bg-rose-500 text-white p-2 rounded-md">Add to Cart</button>
-        </div>
+        {
+            !showQuantitySelector && (
+                <div className="flex flex-col justify-center items-center mt-10 lg:ml-28 md:ml-44">
+                    <button className="border-rose-500 border-2 text-rose-500 p-2 flex justify-center items-center gap-3"
+                    onClick={() => {addToCart(flower)}}>
+                        <FaShoppingBag className='ml-2'  />
+                        <span className='text-sm font-medium mr-2'>Add to cart</span>
+                    </button>
+                </div>
+            )
+        }
 
-        <div className="flex flex-row justify-center items-center mt-3">
-                <p className="text-rose-500 text-lg font-bold mt-3">Quantity</p>
-                <button className="bg-rose-500 text-white p-2 rounded-md"
-                onClick={() => removeFromCart(flower)}
-                >-</button>
-                <p className="text-rose-500 text-lg font-bold mx-2">
-                    {cartItems.find((item) => item.name === flower.name)?.quantity || 0}
-                </p>
-                <button className="bg-rose-500 text-white p-2 rounded-md"
-                onClick={() => addToCart(flower)}
-                >+</button>
-        </div>
+        {
+            showQuantitySelector && (
+                <div className="flex flex-row gap-2 justify-center items-center mt-10 lg:ml-28 md:ml-44">
+                    <button className="border-rose-500 border-2 text-rose-500 p-2 w-10 h-8 flex justify-center items-center"
+                    onClick={() => {removeFromCart(flower)}}
+                    >-</button>
+                    <p className="text-rose-500 text-lg font-bold mx-2">
+                        {cartItems.find((item) => item.name === flower.name)?.quantity || 0}
+                    </p>
+                    <button className="border-rose-500 border-2 text-rose-500 p-2 w-10 h-8 flex justify-center items-center"
+                    onClick={() => addToCart(flower)}
+                    >+</button>
+                </div>
+            )
+
+        }
 
         </div>
 
