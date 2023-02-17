@@ -13,7 +13,7 @@ const Plant = ({ plant }) => {
 
     return (
         <section className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-5 gap-4 mt-32 ml-30 p-4 justify-center items-center w-3/4 h-3/4 glass-container">
-            <div className="flex flex-col justify-center border-2  lg:w-80 w-64 items-center p-2 sm:ml-0 -ml-2">
+            <div className="flex flex-col justify-center border-2  lg:w-80 w-64 items-center p-2 sm:ml-0 md:ml-8">
             <Image src={plant.image} alt={plant.name} className="object-cover shadow-lg " width={500} height={300} />
             </div>
             <div className="flex  flex-col col-span-4 justify-center lg:ml-60  items-start p-4">
@@ -23,7 +23,7 @@ const Plant = ({ plant }) => {
             {makeStars(plant.rating)}
             </span>
             </p>
-            <p className="text-xs text-left border-t-2 mt-3 leading-6">{plant.description}</p>
+            <p className="text-xs text-left border-t-2 mt-5 leading-6">{plant.description}</p>
 
             <div className="flex sm:flex-row flex-col sm:gap-5 sm:ml-0 ml-8 justify-center items-center sm:mt-10 -mt-4">
 

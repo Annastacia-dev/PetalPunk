@@ -2,7 +2,7 @@ import React,{ useState } from 'react'
 import { AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai'
 import Link from 'next/link'
 
-const DropDown = () => {
+const DropDown = ({ setNav }) => {
   const [isOpen, setIsOpen] =useState(false)
   return (
     <div className='relative flex flex-col items-center'>
@@ -12,11 +12,20 @@ const DropDown = () => {
         {isOpen ? <AiOutlineCaretUp className='ml-1'/> : <AiOutlineCaretDown className='ml-1'/>}
         </button>
         <div className={`absolute top-10 bg-rose-800/80 w-40 h-40 flex flex-col items-center justify-center rounded shadow-lg ${isOpen ? 'block' : 'hidden'}`}>
-            <Link href='/flowers' className='text-white text-center' onClick={() => setIsOpen(false)}>Flowers</Link>
+            <Link href='/flowers' className='text-white text-center' onClick={() => {
+              setIsOpen(false)
+              setNav(false)
+              }}>Flowers</Link>
             <hr className='w-3/4 my-2'/>
-            <Link href='/plants' className='text-white text-center' onClick={() => setIsOpen(false)}>Plants</Link>
+            <Link href='/plants' className='text-white text-center' onClick={() => {
+              setIsOpen(false) 
+              setNav(false)
+              }}>Plants</Link>
             <hr className='w-3/4 my-2'/>
-            <Link href='/gifts' className='text-white text-center' onClick={() => setIsOpen(false)}>Gifts</Link>
+            <Link href='/gifts' className='text-white text-center' onClick={() => {
+              setIsOpen(false)
+              setNav(false)
+              }}>Gifts</Link>
         </div>
     </div>
   )

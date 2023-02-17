@@ -84,7 +84,7 @@ const Carousel = () => {
     <pre className='sm:text-left text-center' >
     Some men never think of it. 
     <br />
-    You did. You come along
+    You did. You come along.
     <span className="sm:inline block">
     And say you nearly brought me flowers 
     </span>

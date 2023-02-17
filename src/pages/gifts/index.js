@@ -36,11 +36,11 @@ const Gifts = ({ gifts }) => {
         <input type="range" min="10" max="200" value={price} onChange={handleChange} className="w-50 bg-rose-300 mt-3 rounded-full appearance-none outline-none overflow-hidden" />
       </div>
     <section
-     className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6  ">
+     className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6  ">
       {reFilteredgifts && reFilteredgifts.length > 0 ? reFilteredgifts.map((gift) => (
         <Link key={gift.id} className="flex  flex-col justify-center items-center p-4" href={`/gifts/${gift.name}`}>
           <Image src={gift.image} alt={gift.name} width={200} height={200}
-          className="rounded-lg shadow-lg sm:w-40 sm:h-40 object-cover transform transition-all duration-300 hover:scale-150"
+          className="rounded-lg shadow-lg w-40 h-40 object-cover transform transition-all duration-300 hover:scale-150"
           onMouseOver={e => (e.currentTarget.style.transform = 'scale(1.05)')}
           onMouseOut={e => (e.currentTarget.style.transform = 'scale(1)')} />
           <h2 className="text-sm text-center mt-3">{gift.name}</h2>

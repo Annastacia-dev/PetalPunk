@@ -101,15 +101,11 @@ const NavBar = () => {
         >
           <ul onClick={toggleNav} className="text-center">
             <Link href="/#about">
-              <li className="p-4 text-2xl border-b border-white">About</li>
+              <li className="p-4 text-2xl border-b border-white" onClick={() => setNav(false)} >About</li>
             </Link>
             <Link href="/#contact">
-              <li className="p-4 text-2xl border-b border-white">Contact</li>
+              <li className="p-4 text-2xl border-b border-white" onClick={() => setNav(false)}>Contact</li>
             </Link>
-            <div className="p-4 text-2xl border-b border-white" onClick={(e) => e.stopPropagation()} // on click don't close the menu
-            >
-               <DropDown />
-            </div>
             <Link href="/faqs">
               <li className="p-4 text-2xl border-b border-white">FAQs</li>
             </Link>
@@ -121,6 +117,10 @@ const NavBar = () => {
                 </span>
               </li>
             </Link>
+            <div className="p-4 text-2xl border-b border-white" onClick={(e) => e.stopPropagation()} // on click don't close the menu
+            >
+               <DropDown setNav={setNav} />
+            </div>
           </ul>
         </div>
       </div>
