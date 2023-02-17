@@ -1,9 +1,10 @@
 import { useContext } from 'react'
 import { CartContext } from '../../contexts/cart'
 import Image from 'next/image'
+import { AiFillDelete } from 'react-icons/ai'
 
 const Cart = () => {
-    const { cartItems, removeFromCart, addToCart, cartTotal } = useContext(CartContext)
+    const { cartItems, removeFromCart, addToCart, cartTotal, clearCart } = useContext(CartContext)
 
   return (
     <div className='glass-container w-11/12 mt-32'>
@@ -12,6 +13,17 @@ const Cart = () => {
             <h1 className="text-2xl text-rose-500 font-playfair font-bold ">Cart
             <span className="text-rose-500 text-lg font-bold mx-2">
                 ({cartItems.length})
+            </span>
+            <span>
+                {
+                    cartItems && cartItems.length > 0 && (
+                        <button className='border-2 border-rose-600 p-1  ml-12 font-poppins  justify-center items-center font-normal text-sm'
+                        onClick={clearCart}
+                        >
+                            <AiFillDelete title="Clear cart" />
+                        </button>
+                    )
+                }
             </span>
             </h1>
         </div> 

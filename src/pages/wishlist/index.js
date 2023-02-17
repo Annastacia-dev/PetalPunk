@@ -10,7 +10,7 @@ const Wishlist = () => {
 
     const router = useRouter()
 
-    const { wishlistItems, removeFromWishlist, addToCart, wishlistTotal } = useContext(CartContext)
+    const { wishlistItems, removeFromWishlist, addToCart, wishlistTotal, clearWishlist } = useContext(CartContext)
 
     const [showAddToCartButton, setShowAddToCartButton] = useState(true)
 
@@ -22,6 +22,17 @@ const Wishlist = () => {
             <h1 className="text-2xl text-rose-500 font-playfair font-bold ">WishList
             <span className="text-rose-500 text-lg font-bold mx-2">
                 ({wishlistItems.length})
+            </span>
+            <span>
+                {
+                    wishlistItems && wishlistItems.length > 0 && (
+                        <button className='border-2 border-rose-600 p-1  ml-12 font-poppins  justify-center items-center font-normal text-sm'
+                        onClick={clearWishlist}
+                        >
+                            <AiFillDelete title="Clear wishlist" />
+                        </button>
+                    )
+                }
             </span>
             </h1>
         </div> 
