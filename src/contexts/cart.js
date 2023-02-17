@@ -45,6 +45,77 @@ const CartProvider = ({ children }) => {
         (ack, item) => ack + item.quantity * item.price,
         0
     );
+
+    useEffect(() => {
+        const cartItems = localStorage.getItem("cartItems");
+        if (cartItems) {
+        setCartItems(JSON.parse(cartItems));
+        }
+    }, []);
+
+
+    useEffect(() => {
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }, [cartItems]);
+
+
+    // Wishlist
+
+    const [wishlistItems, setWishlistItems] = useState([]);
+
+    const addToWishlist = (item) => {
+        const isItemInWishlist = wishlistItems.find( (wishlistItem) => wishlistItem.id === item.id);
+
+        if (isItemInWishlist) {
+            setWishlistItems(
+                wishlistItems.map((wishlistItem) =>
+                wishlistItem.id === item.id
+                    ? { ...wishlistItem, quantity: wishlistItem.quantity + 1 }
+                    : wishlistItem
+                )
+            );
+        } else {
+            setWishlistItems([...wishlistItems, { ...item, quantity: 1 }]);
+        }
+    };
+
+    const removeFromWishlist = (item) => {
+        const isItemInWishlist = wishlistItems.find( (wishlistItem) => wishlistItem.id === item.id);
+
+        if (isItemInWishlist.quantity !== undefined && isItemInWishlist.quantity === 1) {
+            setWishlistItems(wishlistItems.filter((wishlistItem) => wishlistItem.id !== item.id));
+        } else {
+            setWishlistItems(
+                wishlistItems.map((wishlistItem) =>
+                wishlistItem.id === item.id
+                    ? { ...wishlistItem, quantity: Math.max(0, wishlistItem.quantity - 1) }
+                    : wishlistItem
+                )
+            );
+        }
+    };
+
+    const clearWishlist = () => {
+        setWishlistItems([]);
+    };
+
+    const wishlistTotal = wishlistItems.reduce(
+        (ack, item) => ack + item.quantity * item.price,
+        0
+    );
+
+    useEffect(() => {
+        const wishlistItems = localStorage.getItem("wishlistItems");
+        if (wishlistItems) {
+            setWishlistItems(JSON.parse(wishlistItems));
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem("wishlistItems", JSON.stringify(wishlistItems));
+    }, [wishlistItems]);
+
+
     
     return (
         <CartContext.Provider
