@@ -103,6 +103,14 @@ const NavBar = () => {
             <Link href="/faqs">
               <li className="p-4 text-2xl border-b border-white">FAQs</li>
             </Link>
+            <Link href="/cart">
+              <li className="relative p-4 text-2xl  border-b border-white">
+                <FaShoppingBag className="ml-8" />
+                <span className="absolute bottom-4 right-8 w-5 h-5 bg-white/90 rounded-full flex justify-center items-center text-rose-700 text-xs">
+                  {cartItems.length}
+                </span>
+              </li>
+            </Link>
           </ul>
         </div>
       </div>

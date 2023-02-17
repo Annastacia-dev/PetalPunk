@@ -13,7 +13,7 @@ const Flower = ({ flower }) => {
         <div className="flex flex-col justify-center border-2  sm:w-80 w-72 items-center p-2 sm:ml-0 -ml-2">
         <Image src={flower.image} alt={flower.name} className="object-cover shadow-lg " width={500} height={300} />
         </div>
-        <div className="flex  flex-col col-span-4 justify-center ml-60 items-start p-4">
+        <div className="flex  flex-col col-span-4 justify-center lg:ml-60  items-start p-4">
         <h2 className="text-2xl text-center mt-3 uppercase">{flower.name}</h2>
         <p className="text-md font-medium mt-3">${flower.price}
         <span className="ml-9 text-rose-500">
