@@ -117,6 +117,14 @@ const NavBar = () => {
                 </span>
               </li>
             </Link>
+            <Link href="/wishlist">
+              <li className="relative p-4 text-2xl  border-b border-white">
+                <BsFillBookmarkStarFill className="ml-8" />
+                <span className="absolute bottom-4 right-8 w-5 h-5 bg-white/90 rounded-full flex justify-center items-center text-rose-700 text-xs">
+                  {wishlistItems.length}
+                </span>
+              </li>
+            </Link>
             <div className="p-4 text-2xl border-b border-white" onClick={(e) => e.stopPropagation()} // on click don't close the menu
             >
                <DropDown setNav={setNav} />
