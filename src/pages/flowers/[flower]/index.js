@@ -4,6 +4,9 @@ import makeStars  from '../../../utils/makeStars'
 import { CartContext } from '../../../contexts/cart'
 import { FaShoppingBag } from "react-icons/fa";
 import { BsFillBookmarkStarFill } from "react-icons/bs";
+import { notifyAdd } from '@/utils/notifications';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Flower = ({ flower }) => {
 
@@ -16,6 +19,20 @@ const Flower = ({ flower }) => {
     const showQuantitySelector = cartItems.find((item) => item.name === flower.name)?.quantity > 0
 
     return (
+        <div>
+             <ToastContainer
+            limit={2}
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme='colored'
+            />
         <section className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-5 gap-4 mt-32 ml-30 p-4 justify-center items-center w-3/4 h-3/4 glass-container">
             <div className="flex flex-col justify-center border-2  lg:w-80 w-64 items-center p-2 sm:ml-0 md:ml-8">
             <Image src={flower.image} alt={flower.name} className="object-cover shadow-lg " width={500} height={300} />
@@ -38,6 +55,7 @@ const Flower = ({ flower }) => {
                     <div className="flex flex-col justify-center items-center mt-10 ">
                         <button className="border-rose-500 border-2 text-rose-500 p-2 flex justify-center items-center gap-3 sm:w-auto w-44"
                         onClick={() => {
+                            notifyAdd(flower.name, 'cart')
                             addToCart(flower)
                             removeFromWishlist(flower)
                             }}>
@@ -53,7 +71,7 @@ const Flower = ({ flower }) => {
                     <div className="flex flex-row gap-2 justify-center items-center mt-10 lg:ml-28 md:ml-44">
                         <button className="border-rose-500 border-2 text-rose-500 p-2 w-10 h-8 flex justify-center items-center"
                         onClick={() => {
-                            removeFromCart(flower)
+                            removeFromCart(flower)    
                         }}
                         >-</button>
                         <p className="text-rose-500 text-lg font-bold mx-2">
@@ -74,7 +92,10 @@ const Flower = ({ flower }) => {
                     !wishlistItems.find((item) => item.name === flower.name) && (
                         <div className="flex flex-col justify-center items-center sm:mt-10 mt-6">
                             <button className="border-rose-500 border-2 text-rose-500 p-2 flex justify-center items-center gap-3 sm:w-auto w-44"
-                            onClick={() => {addToWishlist(flower)}}>
+                            onClick={() => {
+                                notifyAdd(flower.name, 'wishlist')
+                                addToWishlist(flower)
+                                }}>
                                 <BsFillBookmarkStarFill className='ml-2'  />
                                 <span className='text-sm font-medium mr-2'>Add to wishlist</span>
                             </button>
@@ -92,6 +113,7 @@ const Flower = ({ flower }) => {
 
 
         </section>
+        </div>
   )
 }
 

@@ -3,6 +3,7 @@ import { CartContext } from '../../contexts/cart'
 import Image from 'next/image'
 import { AiFillDelete } from 'react-icons/ai'
 
+
 const Cart = () => {
     const { cartItems, removeFromCart, addToCart, cartTotal, clearCart } = useContext(CartContext)
 

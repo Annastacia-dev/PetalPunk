@@ -3,6 +3,7 @@ import { useContext, useState } from 'react'
 import makeStars  from '../../../utils/makeStars'
 import { CartContext } from '../../../contexts/cart'
 import { FaShoppingBag } from "react-icons/fa";
+import { notifyAdd } from '@/utils/notifications';
 import { BsFillBookmarkStarFill } from "react-icons/bs";
 
 const Plant = ({ plant }) => {
@@ -32,6 +33,7 @@ const Plant = ({ plant }) => {
                     <div className="flex flex-col justify-center items-center mt-10 ">
                         <button className="border-rose-500 border-2 text-rose-500 p-2 flex justify-center items-center gap-3 sm:w-auto w-44"
                         onClick={() => {
+                            notifyAdd(plant.name, 'cart')
                             addToCart(plant)
                             removeFromWishlist(plant)
                             }}>
@@ -66,7 +68,10 @@ const Plant = ({ plant }) => {
                     !wishlistItems.find((item) => item.name === plant.name) && (
                         <div className="flex flex-col justify-center items-center sm:mt-10 mt-6">
                             <button className="border-rose-500 border-2 text-rose-500 p-2 flex justify-center items-center gap-3 sm:w-auto w-44"
-                            onClick={() => {addToWishlist(plant)}}>
+                            onClick={() => {
+                                notifyAdd(plant.name, 'wishlist')
+                                addToWishlist(plant)
+                                }}>
                                 <BsFillBookmarkStarFill className='ml-2'  />
                                 <span className='text-sm font-medium mr-2'>Add to wishlist</span>
                             </button>
