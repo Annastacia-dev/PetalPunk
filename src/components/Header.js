@@ -1,16 +1,25 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
-
-
+import { DarkModeContext } from "../contexts/dark";
+import { useContext } from "react";
 
 const Header = () => {
+
+  const { darkMode} = useContext(DarkModeContext)
+
+  const backgroundImage = darkMode ? '/images/darkestflower.jpg' : '/images/pinkflowers.jpg'
+
+
+
   return (
     <>
-    <header className="h-screen flex flex-col header">
-      <div className="flex flex-col justify-center items-start h-full px-8 ml-5">
+    <header className="h-screen bg-cover bg-image bg-center bg-no-repeat flex flex-col"
+    style={{backgroundImage: `url(${backgroundImage})`}}
+    >
+      <div className="flex flex-col justify-center items-start  h-full px-8 ml-5">
         <h1 className="text-5xl font-bold leading-22 font-playfair  text-rose-600 mt-16 mb-8">A bouquet 
         <br />for every occasion.</h1>
-        <p className="text-black  mb-6 text-sm leading-10">Want to send your congratulations, condolences,<br /> or your love and support?<br />No matter the message you want to share, <br /> we have a bouquet for you.</p>  
+        <p className="text-black dark:text-white  mb-6 text-sm leading-10">Want to send your congratulations, condolences,<br /> or your love and support?<br />No matter the message you want to share, <br /> we have a bouquet for you.</p>  
         <motion.a href='/#products' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }}
           className="bg-rose-600 text-white px-10 py-4 rounded-full text-lg mt-6 hover:bg-rose-400 transition duration-300 ease-in-out flex items-left animate-bounce"
         >Shop Now

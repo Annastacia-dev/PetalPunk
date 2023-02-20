@@ -25,8 +25,8 @@ const products = [
 const Products = () => {
   return (
     <div className="h-full" id='products'>
-            <div className="relative bg-rose-50 h-96">
-                <div className='bg-[#f5d9e4]  absolute top-0 right-0 w-1/2 h-full'></div>
+            <div className="relative bg-rose-50 h-96 dark:bg-black">
+                <div className='bg-[#f5d9e4]  absolute top-0 right-0 w-1/2 h-full dark:bg-black'></div>
                 <div className="top-0 absolute left-4 h-screen border-rose-600 mt-5 border-r-2 rose-border">
                     <div className="flex flex-col justify-center h-full">
                         <h1 className="text-rose-600 uppercase text-2xl absolute -left-20 font-bold font-playfair -rotate-90  products-title tracking-wide">
@@ -38,14 +38,14 @@ const Products = () => {
                     {
                         products.map((product) => (
                             <div className="flex justify-center" key={product.id}>
-                                <div className="bg-[#f9fcf6] max-w-sm">
+                                <div className="bg-[#f9fcf6] dark:bg-black dark:text-white max-w-sm">
                                     <a href={`/${product.name}`}  data-mdb-ripple="true" data-mdb-ripple-color="light">
                                         <Image src={product.image} width={300} height={300} alt={product.name}
                                         className=" transform transition-all duration-300 hover:scale-150"
                                         onMouseOver={e => (e.currentTarget.style.transform = 'scale(1.05)')}
                                         onMouseOut={e => (e.currentTarget.style.transform = 'scale(1)')}
                                         />
-                                        <h5 className="text-gray-900 text-xl font-medium mb-2 p-6 capitalize">{product.name} &rarr;</h5>
+                                        <h5 className="text-gray-900 dark:text-white text-xl font-medium mb-2 p-6 capitalize">{product.name} &rarr;</h5>
                                     </a>
                                 </div>
                             </div>

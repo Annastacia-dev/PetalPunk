@@ -33,7 +33,7 @@ const Flower = ({ flower }) => {
             pauseOnHover
             theme='colored'
             />
-        <section className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-5 gap-4 mt-32 ml-30 p-4 justify-center items-center w-3/4 h-3/4 glass-container">
+        <section className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-5 gap-4 mt-32 ml-30 p-4 justify-center items-center w-3/4 h-3/4 glass-container dark:bg-black">
             <div className="flex flex-col justify-center border-2  lg:w-80 w-64 items-center p-2 sm:ml-0 md:ml-8">
             <Image src={flower.image} alt={flower.name} className="object-cover shadow-lg " width={500} height={300} />
             </div>
@@ -53,7 +53,7 @@ const Flower = ({ flower }) => {
             {
                 !showQuantitySelector && (
                     <div className="flex flex-col justify-center items-center mt-10 ">
-                        <button className="border-rose-500 border-2 text-rose-500 p-2 flex justify-center items-center gap-3 sm:w-auto w-44"
+                        <button className="bg-rose-500 border-2 border-rose-500  text-white hover:bg-white hover:text-rose-500 hover:border-white p-2 flex justify-center items-center gap-3 sm:w-auto w-44"
                         onClick={() => {
                             notifyAdd(flower.name, 'cart')
                             addToCart(flower)
@@ -91,7 +91,7 @@ const Flower = ({ flower }) => {
                 !showQuantitySelector && (
                     !wishlistItems.find((item) => item.name === flower.name) && (
                         <div className="flex flex-col justify-center items-center sm:mt-10 mt-6">
-                            <button className="border-rose-500 border-2 text-rose-500 p-2 flex justify-center items-center gap-3 sm:w-auto w-44"
+                            <button className="border-rose-500 border-2 text-rose-500 p-2 flex justify-center items-center gap-3 sm:w-auto w-44  hover:border-white hover:text-white "
                             onClick={() => {
                                 notifyAdd(flower.name, 'wishlist')
                                 addToWishlist(flower)

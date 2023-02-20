@@ -3,10 +3,10 @@ import Products from "./Products"
 import About from "./About"
 import FlowersCarousel from "./FlowersCarousel"
 
-const PageLayout = () => {
+const PageLayout = ({ darkMode }) => {
   return (
     <>
-        <Header />
+        <Header darkMode={darkMode} />
         <Products />
         <About />
         <FlowersCarousel />

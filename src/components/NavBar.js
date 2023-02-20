@@ -7,28 +7,37 @@ import Image from "next/image";
 import DropDown from "./DropDown";
 import { useContext } from "react";
 import { CartContext } from "../contexts/cart";
+import { DarkModeContext } from "../contexts/dark";
 import { BsFillBookmarkStarFill, BsFillMoonStarsFill, BsSunFill } from "react-icons/bs";
 
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
-  const [backgroundColor, setBackgroundColor] = useState("transparent");
-
+  const [isScrolled, setIsScrolled] = useState(false);
   const { cartItems, wishlistItems } = useContext(CartContext)
+  const { darkMode, setDarkMode} = useContext(DarkModeContext)
 
-  useEffect(() => {
-    const changeBackground = () => {
-      if (window.scrollY >= 40) {
-        setBackgroundColor("white");
-      } else {
-        setBackgroundColor("transparent");
-      }
-    };
-    window.addEventListener("scroll", changeBackground);
-    return () => {
-      window.removeEventListener("scroll", changeBackground);
-    };
-  }, []);
+  // DarkMode
+  const switchMode = () => {
+    setDarkMode(!darkMode)
+  }
+
+
+// NavBar Background
+
+useEffect(() => {
+  const handleScroll = () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    setIsScrolled(scrollTop > 0);
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+}, []);
+
+const navBackground = isScrolled ? (darkMode ? 'black' : 'white') : 'transparent';
 
 
   
@@ -37,13 +46,13 @@ const NavBar = () => {
   };
 
   return (
-    <div style={{ backgroundColor: `${backgroundColor}` }} className="fixed left-0 top-0 w-full z-10 ease-in duration-300">
+    <div style={{ backgroundColor: `${navBackground}` }} className="dark:text-white fixed left-0 top-0 w-full z-10 ease-in duration-300">
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-3 h-22">
         <Link className="flex flex-row gap-3 justify-center items-center"  href="/">
             <Image src="/images/logo.png" width={30} height={30} alt='logo' />
             <span className="mt-1 text-md text-center font-playfair font-bold text-[#da207a]">Waridi</span>
         </Link>
-        <ul className=" text-black hidden sm:flex">
+        <ul className="dark:text-white text-black hidden sm:flex">
           <Link href="/">
             <li className="p-4 font-semibold hover:text-rose-500">Home</li>
           </Link>
@@ -70,6 +79,16 @@ const NavBar = () => {
               {wishlistItems.length}
             </span>
           </Link>
+
+          <div className="transition cursor-pointer hover:text-rose-500" onClick={switchMode}>
+              {
+                !darkMode ? (
+                  <li className="p-4 font-semibold hover:text-rose-500"><BsFillMoonStarsFill title="Dark mode" /></li>
+                ) : (
+                  <li className="p-4 font-semibold hover:text-rose-500"><BsSunFill title="Light Mode" /></li>
+                )
+              }
+          </div>
 
         </ul>
 

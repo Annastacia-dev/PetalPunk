@@ -8,7 +8,7 @@ const Cart = () => {
     const { cartItems, removeFromCart, addToCart, cartTotal, clearCart } = useContext(CartContext)
 
   return (
-    <div className='glass-container w-11/12 mt-32'>
+    <div className='glass-container w-11/12 mt-32 dark:bg-black'>
     <div className="flex flex-col  justify-center items-center ">
         <div className='flex flex-row justify-center items-center' >    
             <h1 className="text-2xl text-rose-500 font-playfair font-bold ">Cart

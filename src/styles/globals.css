@@ -7,12 +7,6 @@
     scroll-behavior: smooth;
     @apply font-poppins;
   } 
-  .header {
-    background-image: url("/images/pinkflowers.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
   .footer-grids{
     margin-top: 1rem;
   }

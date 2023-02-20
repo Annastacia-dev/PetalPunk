@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="w-10 h-10 -ml-5 bg-rose-500 rounded-full mr-4"></div>
       <div className="text-rose-600 font-playfair font-bold text-3xl uppercase">Reach out</div>
     </div>
-    <footer className="bg-rose-800 h-full mt-18">
+    <footer className="bg-rose-800 dark:bg-black h-full mt-18">
         <div className="sm:grid grid-cols-4 gap-4 mx-auto sm:px-10 sm:py-10 footer-grids">
             <div className="sm:col-span-1 border-white border-r-2 flex gap-3  justify-center items-center">
                 <Image src="/images/whitelogo.png" width={30} height={30} alt='logo' className='mt-3 ml-3'
@@ -78,24 +78,24 @@ const Footer = () => {
         </div>
         <div className='flex justify-center gap-5 items-center mt-5  mx-auto'>
             <a href="https://www.facebook.com/waridiflorist/" target="_blank" rel="noreferrer"
-            className='sm:h-10 sm:w-10 bg-white rounded-full flex justify-center items-center mt-5 mb-5'>
-                <i className="fab fa-facebook-f text-rose-800 text-2xl mx-2"></i>
+            className='sm:h-10 sm:w-10 bg-white hover:bg-transparent hover:border-white hover:border  rounded-full flex justify-center items-center mt-5 mb-5'>
+                <i className="fab fa-facebook-f text-rose-800 hover:text-white text-2xl mx-2"></i>
             </a>
             <a href="https://www.instagram.com/waridiflorist/" target="_blank" rel="noreferrer"
-            className='h-10 w-10 bg-white rounded-full flex justify-center items-center mt-5 mb-5'>
-                <i className="fab fa-instagram text-rose-800 text-2xl mx-2"></i>
+            className='h-10 w-10 bg-white hover:bg-transparent hover:border-white hover:border rounded-full flex justify-center items-center mt-5 mb-5'>
+                <i className="fab fa-instagram text-rose-800 hover:text-white text-2xl mx-2"></i>
             </a>
             <a href="https://twitter.com/waridiflorist" target="_blank" rel="noreferrer"
-            className='h-10 w-10 bg-white rounded-full flex justify-center items-center mt-5 mb-5'>
-                <i className="fab fa-twitter text-rose-800 text-2xl mx-2"></i>
+            className='h-10 w-10 bg-white hover:bg-transparent hover:border-white hover:border rounded-full flex justify-center items-center mt-5 mb-5'>
+                <i className="fab fa-twitter text-rose-800 hover:text-white text-2xl mx-2"></i>
             </a>
             <a href="https://www.linkedin.com/company/waridi-florist/" target="_blank" rel="noreferrer"
-            className='h-10 w-10 bg-white rounded-full flex justify-center items-center mt-5 mb-5'>
-                <i className="fab fa-linkedin-in text-rose-800 text-2xl mx-2"></i>
+            className='h-10 w-10 bg-white hover:bg-transparent hover:border-white hover:border rounded-full flex justify-center items-center mt-5 mb-5'>
+                <i className="fab fa-linkedin-in text-rose-800 hover:text-white text-2xl mx-2"></i>
             </a>
             <a href="https://pinterest.com/waridiflorist/" target="_blank" rel="noreferrer"
-            className='h-10 w-10 bg-white rounded-full flex justify-center items-center mt-5 mb-5'>
-                <i className="fab fa-pinterest-p text-rose-800 text-2xl mx-2"></i>
+            className='h-10 w-10 bg-white hover:bg-transparent hover:border-white hover:border rounded-full flex justify-center items-center mt-5 mb-5'>
+                <i className="fab fa-pinterest-p text-rose-800 hover:text-white text-2xl mx-2"></i>
             </a>
         </div>
         <div className=' flex justify-center items-center mt-5'>
