@@ -48,7 +48,7 @@ const Wishlist = () => {
                     <div className='flex flex-row ml-4'>
                         <div className="flex flex-col sm:w-96 w-56">
                         <p className="text-md relative  mx-2">{item.name}
-                        <span className='absolute text-gray-700 sm:right-6 right-2'>${item.price}</span>
+                        <span className='absolute text-gray-700 dark:text-gray-300 sm:right-6 right-2'>${item.price}</span>
                         </p>
                         <p className="text-xs  mt-3 mx-2 ">{item.description}</p>
                         </div>
@@ -56,7 +56,7 @@ const Wishlist = () => {
                     <div className='flex flex-row gap-2 justify-center absolute sm:bottom-1 sm:-right-30 bottom-8 right-1 align-center'>
                     {
                         showAddToCartButton && (
-                            <button className="bg-rose-500 border flex justify-center items-center gap-2 text-white p-2 text-sm"
+                            <button className="bg-rose-500 border-rose-500 hover:border-white hover:bg-white hover:text-rose-500 border flex justify-center items-center gap-2 text-white p-2 text-sm"
                                 onClick={() => {
                                 addToCart(item)
                                 removeFromWishlist(item)

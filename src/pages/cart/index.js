@@ -39,7 +39,7 @@ const Cart = () => {
                     <div className='flex flex-row ml-4'>
                         <div className="flex flex-col sm:w-96 w-56">
                         <p className="text-md relative  mx-2">{item.name}
-                        <span className='absolute text-gray-700 sm:right-6 right-2'>${item.price}</span>
+                        <span className='absolute text-gray-700 dark:text-gray-300 sm:right-6 right-2'>${item.price}</span>
                         </p>
                         <p className="text-xs  mt-3 mx-2 ">{item.description}</p>
                         </div>
