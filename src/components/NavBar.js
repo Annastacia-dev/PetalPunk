@@ -7,7 +7,7 @@ import Image from "next/image";
 import DropDown from "./DropDown";
 import { useContext } from "react";
 import { CartContext } from "../contexts/cart";
-import { BsFillBookmarkStarFill } from "react-icons/bs";
+import { BsFillBookmarkStarFill, BsFillMoonStarsFill, BsSunFill } from "react-icons/bs";
 
 
 const NavBar = () => {
@@ -19,7 +19,7 @@ const NavBar = () => {
   useEffect(() => {
     const changeBackground = () => {
       if (window.scrollY >= 40) {
-        setBackgroundColor("#f9fcf6");
+        setBackgroundColor("white");
       } else {
         setBackgroundColor("transparent");
       }
@@ -56,10 +56,6 @@ const NavBar = () => {
           <div>
             <li className="p-4 font-semibold hover:text-rose-500"><DropDown /></li>
           </div>
-          
-          <Link href="/faqs">
-            <li className="p-4 font-semibold hover:text-rose-500">FAQs</li>
-          </Link>
 
           <Link href="/cart" className="p-4 font-semibold cart-icon relative mt-0.5 hover:text-rose-500">
             <FaShoppingBag title="Cart" />
@@ -105,9 +101,6 @@ const NavBar = () => {
             </Link>
             <Link href="/#contact">
               <li className="p-4 text-2xl border-b border-white" onClick={() => setNav(false)}>Contact</li>
-            </Link>
-            <Link href="/faqs">
-              <li className="p-4 text-2xl border-b border-white">FAQs</li>
             </Link>
             <Link href="/cart">
               <li className="relative p-4 text-2xl  border-b border-white">

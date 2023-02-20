@@ -7,9 +7,6 @@
     scroll-behavior: smooth;
     @apply font-poppins;
   } 
-  body{
-    background-color: #f9fcf6;
-  }
   .header {
     background-image: url("/images/pinkflowers.jpg");
     background-size: cover;
