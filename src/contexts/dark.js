@@ -4,7 +4,7 @@ const DarkModeContext = createContext();
 
 const DarkModeProvider = ({ children }) => {
 
-    const [darkMode,setDarkMode] = useState(false)
+    const [darkMode,setDarkMode] = useState(undefined)
 
     useEffect(() => {
 
@@ -16,7 +16,7 @@ const DarkModeProvider = ({ children }) => {
         localStorage.setItem("darkMode", "false")
         window.document.documentElement.classList.remove("dark")
         } else {
-        setDarkMode(localStorage.getItem("darkMode"))
+        setDarkMode(localStorage.getItem("darkMode") === "true")
         }
 
 
