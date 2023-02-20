@@ -5,8 +5,11 @@ import { CartContext } from '../../../contexts/cart'
 import { FaShoppingBag } from "react-icons/fa";
 import { notifyAdd } from '@/utils/notifications';
 import { BsFillBookmarkStarFill } from "react-icons/bs";
+import { usePageTitle } from '../../../custom/title'
 
 const Gift = ({ gift }) => {
+
+    usePageTitle()
 
     const { cartItems, removeFromCart, addToCart, wishlistItems, addToWishlist, removeFromWishlist} = useContext(CartContext)
 

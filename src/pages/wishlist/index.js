@@ -5,8 +5,11 @@ import { useRouter } from 'next/router'
 import Image from 'next/image';
 import { AiFillDelete } from 'react-icons/ai'
 import { FaShoppingBag } from "react-icons/fa";
+import { usePageTitle } from '../../custom/title'
 
 const Wishlist = () => {
+
+    usePageTitle()
 
     const router = useRouter()
 

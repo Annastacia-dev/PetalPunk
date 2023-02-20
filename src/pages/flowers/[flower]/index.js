@@ -7,8 +7,11 @@ import { BsFillBookmarkStarFill } from "react-icons/bs";
 import { notifyAdd } from '@/utils/notifications';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { usePageTitle } from '../../../custom/title'
 
 const Flower = ({ flower }) => {
+
+    usePageTitle()
 
     const { cartItems, removeFromCart, addToCart, wishlistItems, addToWishlist, removeFromWishlist } = useContext(CartContext)
 

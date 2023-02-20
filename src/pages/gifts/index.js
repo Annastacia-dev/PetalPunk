@@ -1,9 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { usePageTitle } from '../../custom/title'
 
 const Gifts = ({ gifts }) => {
+
+  usePageTitle()
 
     const [price, setPrice] = useState(200)
 

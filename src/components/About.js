@@ -1,6 +1,11 @@
 import Image from 'next/image'
+import { usePageTitle } from '../custom/title'
+
 
 const About = () => {
+
+    usePageTitle()
+
   return (
     <div className='relative about' id='about'>
         <div className='sm:grid grid-cols-3  mx-auto sm:px-10 sm:py-10'>

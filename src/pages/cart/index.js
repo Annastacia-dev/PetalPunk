@@ -2,10 +2,12 @@ import { useContext } from 'react'
 import { CartContext } from '../../contexts/cart'
 import Image from 'next/image'
 import { AiFillDelete } from 'react-icons/ai'
+import { usePageTitle } from '../../custom/title'
 
 
 const Cart = () => {
     const { cartItems, removeFromCart, addToCart, cartTotal, clearCart } = useContext(CartContext)
+    usePageTitle()
 
   return (
     <div className='glass-container w-11/12 mt-32 dark:bg-black'>
