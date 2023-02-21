@@ -115,6 +115,24 @@ const navBackground = isScrolled ? (darkMode ? 'black' : 'white') : 'transparent
           }
         >
           <ul onClick={toggleNav} className="text-center">
+            <div>
+              <div className="p-4 text-2xl  border-b border-white">
+                <div className="transition ml-5  cursor-pointer hover:text-rose-500" onClick={() => {
+                  switchMode()
+                  setNav(false)
+                  }}>
+                {
+                  !darkMode ? (
+                    <li className="p-4 font-semibold hover:text-rose-500"><BsFillMoonStarsFill title="Dark mode" /></li>
+                  ) : (
+                    <li className="p-4 font-semibold hover:text-rose-500"><BsSunFill title="Light Mode" /></li>
+                  )
+                }
+                  </div>
+               
+              </div>
+            </div>
+          
             <Link href="/#about">
               <li className="p-4 text-2xl border-b border-white" onClick={() => setNav(false)} >About</li>
             </Link>
@@ -124,7 +142,7 @@ const navBackground = isScrolled ? (darkMode ? 'black' : 'white') : 'transparent
             <Link href="/cart">
               <li className="relative p-4 text-2xl  border-b border-white">
                 <FaShoppingBag className="ml-8" />
-                <span className="absolute bottom-4 right-8 w-5 h-5 bg-white/90 rounded-full flex justify-center items-center text-rose-700 text-xs">
+                <span className="absolute bottom-4 right-6 w-5 h-5 bg-white/90 rounded-full flex justify-center items-center text-rose-700 text-xs">
                   {cartItems.length}
                 </span>
               </li>
@@ -132,7 +150,7 @@ const navBackground = isScrolled ? (darkMode ? 'black' : 'white') : 'transparent
             <Link href="/wishlist">
               <li className="relative p-4 text-2xl  border-b border-white">
                 <BsFillBookmarkStarFill className="ml-8" />
-                <span className="absolute bottom-4 right-8 w-5 h-5 bg-white/90 rounded-full flex justify-center items-center text-rose-700 text-xs">
+                <span className="absolute bottom-4 right-6 w-5 h-5 bg-white/90 rounded-full flex justify-center items-center text-rose-700 text-xs">
                   {wishlistItems.length}
                 </span>
               </li>
