@@ -34,7 +34,7 @@ const Plant = ({ plant }) => {
             {
                 !showQuantitySelector && (
                     <div className="flex flex-col justify-center items-center mt-10 ">
-                        <button className="bg-rose-500 border-rose-500 border-2 text-white hover:bg-white hover:border-white hover:text-rose-500 p-2 flex justify-center items-center gap-3 sm:w-auto w-44"
+                        <button className="bg-rose-500 border-rose-500 border-2 text-white dark:hover:bg-white dark:hover:border-white hover:text-rose-500 p-2 flex justify-center items-center gap-3 sm:w-auto w-44 hover:bg-transparent hover:border-2 hover:border-rose-500"
                         onClick={() => {
                             notifyAdd(plant.name, 'cart')
                             addToCart(plant)
@@ -70,7 +70,7 @@ const Plant = ({ plant }) => {
                 !showQuantitySelector && (
                     !wishlistItems.find((item) => item.name === plant.name) && (
                         <div className="flex flex-col justify-center items-center sm:mt-10 mt-6">
-                            <button className="border-rose-500 border-2 text-rose-500 p-2 flex justify-center items-center gap-3 sm:w-auto w-44 hover:border-white hover:text-white"
+                            <button className="border-rose-500 border-2 text-rose-500 p-2 flex justify-center items-center gap-3 sm:w-auto w-44 hover:border-white dark:hover:text-white hover:bg-rose-500 hover:text-white dark:hover:border-rose-500 "
                             onClick={() => {
                                 notifyAdd(plant.name, 'wishlist')
                                 addToWishlist(plant)

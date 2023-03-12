@@ -110,8 +110,8 @@ const navBackground = isScrolled ? (darkMode ? 'black' : 'white') : 'transparent
         <div
           className={
             nav
-              ? "sm:hidden absolute top-0 right-0 left-0 bottom-0 flex justify-center items-center  w-full h-screen bg-rose-600/90 text-white duration-300 ease-in-out"
-              : "sm:hidden absolute top-0 right-0 left-[-100%] bottom-0 flex justify-center items-center w-full h-screen bg-rose-600/70 text-white duration-300 ease-in-out"
+              ? "sm:hidden absolute top-0 right-0 left-0 bottom-0 flex justify-center items-center  w-full h-screen bg-rose-600/90 dark:bg-black/90 text-white duration-300 ease-in-out"
+              : "sm:hidden absolute top-0 right-0 left-[-100%] bottom-0 flex justify-center items-center w-full h-screen bg-rose-600/70 dark:bg-black/70 text-white duration-300 ease-in-out"
           }
         >
           <ul onClick={toggleNav} className="text-center">

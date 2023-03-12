@@ -41,7 +41,7 @@ const Products = () => {
                                 <div className="bg-[#f9fcf6] dark:bg-black dark:text-white max-w-sm">
                                     <a href={`/${product.name}`}  data-mdb-ripple="true" data-mdb-ripple-color="light">
                                         <Image src={product.image} width={300} height={300} alt={product.name}
-                                        className=" transform transition-all duration-300 hover:scale-150"
+                                        className=" transform transition-all duration-300 hover:scale-150 bg-fixed"
                                         onMouseOver={e => (e.currentTarget.style.transform = 'scale(1.05)')}
                                         onMouseOut={e => (e.currentTarget.style.transform = 'scale(1)')}
                                         />
